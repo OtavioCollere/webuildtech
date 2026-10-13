@@ -1,0 +1,5 @@
+.specs
+*.zip
+.DS_Store
+.env*
+.vercel

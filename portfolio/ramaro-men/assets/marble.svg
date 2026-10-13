@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" viewBox="0 0 900 900">
+  <defs>
+    <filter id="marble" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.009 0.02" numOctaves="5" seed="14" stitchTiles="stitch" result="noise"></feTurbulence>
+      <feColorMatrix in="noise" type="saturate" values="0" result="gray"></feColorMatrix>
+      <feComponentTransfer in="gray" result="veins">
+        <feFuncA type="gamma" amplitude="1" exponent="7" offset="0"></feFuncA>
+      </feComponentTransfer>
+      <feColorMatrix in="veins" type="matrix" values="0 0 0 0 0.62  0 0 0 0 0.58  0 0 0 0 0.50  0 0 0 0.55 0"></feColorMatrix>
+    </filter>
+  </defs>
+  <rect width="900" height="900" filter="url(#marble)"></rect>
+</svg>

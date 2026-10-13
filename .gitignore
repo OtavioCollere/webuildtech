@@ -1,5 +1,5 @@
-# pacotes de origem do design/protótipo — não versionar
-*.zip
 .DS_Store
+*.zip
 .vercel
 .env*
+.specs
