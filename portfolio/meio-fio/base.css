@@ -87,6 +87,15 @@ ul, ol { list-style: none; }
   .demo-bar__voltar { padding-left: 16px; border-left: 1px solid rgba(244, 246, 252, 0.15); }
 }
 
+/* Abaixo de 390 (375, 360) os links apertam o tracking e o gap para continuarem cabendo sem rolar. */
+@media (max-width: 389px) {
+  .demo-bar__links { gap: 14px; }
+  .demo-bar__links a { letter-spacing: 0.1em; }
+}
+@media (max-width: 374px) {
+  .demo-bar__links { gap: 10px; }
+}
+
 /* ---------- Logo (tipográfico: o hífen é o bloco amarelo do meio-fio) ---------- */
 
 .logo {
