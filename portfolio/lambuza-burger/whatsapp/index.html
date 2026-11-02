@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>WhatsApp · Lambuza Burger (conversa simulada)</title>
+  <meta name="description" content="Demonstração de pedido pelo WhatsApp da Lambuza Burger, hamburgueria fictícia. Conversa simulada, nenhuma mensagem é enviada.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Geist+Mono:wght@400;500&family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/whatsapp.css">
+</head>
+<body class="pagina-wa">
+  <div class="demo-bar">
+    <span class="demo-bar__brand">Conceito WeBuild</span>
+    <nav class="demo-bar__links" aria-label="Partes da demonstração">
+      <a href="../">Landing</a><span class="demo-bar__sep" aria-hidden="true">·</span>
+      <a href="../totem/">Totem</a><span class="demo-bar__sep" aria-hidden="true">·</span>
+      <a href="./" aria-current="page">WhatsApp</a><span class="demo-bar__sep" aria-hidden="true">·</span>
+      <a href="../bastidores/">Bastidores</a>
+    </nav>
+    <a class="demo-bar__back" href="../../../#portfolio"><span aria-hidden="true">←</span> <span class="demo-bar__back-text">Portfólio</span></a>
+  </div>
+
+  <main class="wa-palco">
+    <div class="wa-texto">
+      <a class="logo" href="../" aria-label="Lambuza Burger, voltar à landing">Lambuza<svg class="logo__drip" viewBox="0 0 64 22" aria-hidden="true"><path d="M0 4 C0 1.8 1.8 0 4 0 H60 C62.2 0 64 1.8 64 4 C64 6 62.5 7.5 60.5 7.8 C58 8.2 57 10 57 12 V15 C57 17.2 55.2 19 53 19 C50.8 19 49 17.2 49 15 V12 C49 10 47.5 8.5 45.5 8.5 H24 C22 8.5 20.5 10 20.5 12 V18 C20.5 20.2 18.7 22 16.5 22 C14.3 22 12.5 20.2 12.5 18 V12 C12.5 10 11 8.5 9 8.2 L4 7.8 C1.8 7.6 0 6 0 4 Z" fill="#F4B400"/></svg></a>
+      <h1 class="wa-texto__titulo">Pedido no WhatsApp, respondido na hora.</h1>
+      <p class="wa-texto__desc">Toque nas opções do celular ao lado e faça um pedido de entrega inteiro: cardápio, combo, endereço, pagamento e confirmação com o tempo estimado.</p>
+      <ol class="wa-passos" aria-label="Etapas do pedido">
+        <li class="wa-passo" data-passo="1"><span class="wa-passo__n">1</span>Cardápio</li>
+        <li class="wa-passo" data-passo="2"><span class="wa-passo__n">2</span>Itens</li>
+        <li class="wa-passo" data-passo="3"><span class="wa-passo__n">3</span>Endereço</li>
+        <li class="wa-passo" data-passo="4"><span class="wa-passo__n">4</span>Pagamento</li>
+        <li class="wa-passo" data-passo="5"><span class="wa-passo__n">5</span>Confirmação</li>
+      </ol>
+      <div class="wa-texto__acoes">
+        <button class="btn btn--contorno-branco wa-texto__btn" type="button" data-acao="recomecar">Recomeçar conversa</button>
+        <a class="link-sublinhado wa-texto__link" href="../bastidores/">Ver os bastidores <span aria-hidden="true">→</span></a>
+      </div>
+      <p class="wa-texto__nota">Demonstração · conversa simulada. Nenhuma mensagem é enviada, e o número +55 41 90000-0001 é fictício.</p>
+    </div>
+
+    <div class="wa-celular">
+      <div class="wa-app">
+        <header class="wa-cab">
+          <a class="wa-cab__voltar" href="../" aria-label="Voltar para a landing">←</a>
+          <span class="wa-cab__avatar" aria-hidden="true">L</span>
+          <div class="wa-cab__nome">
+            <p class="wa-cab__titulo">Lambuza Burger</p>
+            <p class="wa-cab__sub" data-status>Conta comercial · responde na hora</p>
+          </div>
+        </header>
+        <p class="wa-faixa"><span class="wa-faixa__ponto" aria-hidden="true"></span>Demonstração · conversa simulada</p>
+        <div class="wa-conversa" id="conversa" role="log" aria-live="polite" aria-label="Conversa com a Lambuza Burger"></div>
+        <div class="wa-entrada" aria-hidden="true">
+          <div class="wa-entrada__campo">Toque numa opção acima</div>
+          <span class="wa-entrada__enviar"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M3 20.5 21.5 12 3 3.5l.01 6.6L16 12 3.01 13.9z" fill="#FFFFFF"/></svg></span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="../assets/js/demo-bar.js"></script>
+  <script src="../assets/js/whatsapp.js"></script>
+</body>
+</html>

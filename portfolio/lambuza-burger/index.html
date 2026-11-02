@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Lambuza Burger · Hamburgueria no Rebouças (conceito WeBuild)</title>
+  <meta name="description" content="Lambuza Burger, hamburgueria fictícia criada pela WeBuild como demonstração: cardápio, horário e pedido pelo WhatsApp.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Geist+Mono:wght@400;500&family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/landing.css">
+</head>
+<body>
+  <div class="demo-bar">
+    <span class="demo-bar__brand">Conceito WeBuild</span>
+    <nav class="demo-bar__links" aria-label="Partes da demonstração">
+      <a href="./" aria-current="page">Landing</a><span class="demo-bar__sep" aria-hidden="true">·</span>
+      <a href="totem/">Totem</a><span class="demo-bar__sep" aria-hidden="true">·</span>
+      <a href="whatsapp/">WhatsApp</a><span class="demo-bar__sep" aria-hidden="true">·</span>
+      <a href="bastidores/">Bastidores</a>
+    </nav>
+    <a class="demo-bar__back" href="../../#portfolio"><span aria-hidden="true">←</span> <span class="demo-bar__back-text">Portfólio</span></a>
+  </div>
+
+  <header class="hero">
+    <div class="topo wrap">
+      <a class="logo" href="./" aria-label="Lambuza Burger, início">
+        Lambuza
+        <svg class="logo__drip" viewBox="0 0 64 22" aria-hidden="true"><path d="M0 4 C0 1.8 1.8 0 4 0 H60 C62.2 0 64 1.8 64 4 C64 6 62.5 7.5 60.5 7.8 C58 8.2 57 10 57 12 V15 C57 17.2 55.2 19 53 19 C50.8 19 49 17.2 49 15 V12 C49 10 47.5 8.5 45.5 8.5 H24 C22 8.5 20.5 10 20.5 12 V18 C20.5 20.2 18.7 22 16.5 22 C14.3 22 12.5 20.2 12.5 18 V12 C12.5 10 11 8.5 9 8.2 L4 7.8 C1.8 7.6 0 6 0 4 Z" fill="#F4B400"/></svg>
+      </a>
+      <nav class="topo__nav" aria-label="Seções">
+        <a href="#cardapio">Cardápio</a>
+        <a href="#como-pedir">Como pedir</a>
+        <a href="#onde-fica">Onde fica</a>
+        <a class="btn btn--mostarda topo__cta" href="whatsapp/">Pedir pelo WhatsApp</a>
+      </nav>
+      <a class="btn btn--mostarda topo__cta-curto" href="whatsapp/">Pedir</a>
+    </div>
+
+    <div class="hero__corpo wrap">
+      <div class="hero__texto">
+        <p class="selo-aberto"><span class="selo-aberto__ponto" aria-hidden="true"></span>Aberto hoje · 18h às 23h</p>
+        <h1 class="hero__titulo">Pode se lambuzar.</h1>
+        <p class="hero__sub">Blend de 150 g na chapa, pão de batata tostado na manteiga e o molho da casa. Peça pelo WhatsApp e receba em casa no Rebouças e arredores.</p>
+        <div class="hero__acoes">
+          <div class="hero__botoes">
+            <a class="btn btn--mostarda btn--sombra btn--grande" href="whatsapp/">
+              <svg class="icone-whats" viewBox="0 0 256 256" aria-hidden="true"><path fill="#1A1310" d="M187.58 144.84l-32-16a8 8 0 0 0-8 .5l-14.69 9.8a40.55 40.55 0 0 1-16-16l9.8-14.69a8 8 0 0 0 .5-8l-16-32A8 8 0 0 0 104 64a40 40 0 0 0-40 40 88.1 88.1 0 0 0 88 88 40 40 0 0 0 40-40 8 8 0 0 0-4.42-7.16ZM152 176a72.08 72.08 0 0 1-72-72 24 24 0 0 1 19.29-23.54l11.48 23L101 118a8 8 0 0 0-.73 7.51 56.47 56.47 0 0 0 30.15 30.15A8 8 0 0 0 138 155l14.61-9.74 23 11.48A24 24 0 0 1 152 176ZM128 24a104 104 0 0 0-91.82 152.88l-11.35 34.05a16 16 0 0 0 20.24 20.24l34.05-11.35A104 104 0 1 0 128 24Zm0 192a87.87 87.87 0 0 1-44.06-11.81 8 8 0 0 0-6.54-.67L40 216l12.47-37.4a8 8 0 0 0-.66-6.54A88 88 0 1 1 128 216Z"/></svg>
+              Pedir pelo WhatsApp
+            </a>
+            <a class="btn btn--contorno-branco btn--grande-sec" href="#cardapio">Ver o cardápio</a>
+          </div>
+          <p class="hero__micro">A confirmação já chega com o tempo de entrega.</p>
+        </div>
+      </div>
+      <div class="hero__foto">
+        <img src="assets/img/hero.jpg" width="880" height="1168" alt="Hambúrguer duplo com cheddar escorrendo e cebola na chapa, em close sobre fundo vermelho">
+        <div class="selo-preco" aria-hidden="true">
+          <span class="selo-preco__nome">Lambuzão</span>
+          <span class="selo-preco__valor">R$ 38</span>
+          <span class="selo-preco__nota">o da casa</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="cardapio" id="cardapio" aria-labelledby="cardapio-titulo">
+      <div class="wrap cardapio__wrap">
+        <div class="cardapio__topo">
+          <div class="cabecalho">
+            <p class="sobretitulo">Cardápio</p>
+            <h2 class="titulo-secao" id="cardapio-titulo">Saindo da chapa</h2>
+          </div>
+          <div class="abas" role="tablist" aria-label="Categorias do cardápio">
+            <button class="aba is-ativa" role="tab" aria-selected="true" data-aba="lanches">Lanches</button>
+            <button class="aba" role="tab" aria-selected="false" data-aba="acompanhamentos">Acompanhamentos</button>
+            <button class="aba" role="tab" aria-selected="false" data-aba="bebidas">Bebidas</button>
+            <button class="aba" role="tab" aria-selected="false" data-aba="combos">Combos</button>
+          </div>
+        </div>
+
+        <div class="painel-aba" data-painel="lanches" role="tabpanel">
+          <div class="cardapio__corpo">
+            <article class="destaque">
+              <div class="destaque__foto">
+                <img src="assets/img/lambuzao.jpg" width="1000" height="1000" alt="Lambuzão: dois hambúrgueres com cheddar duplo e cebola na chapa" loading="lazy">
+                <span class="selo-casa">Da casa</span>
+              </div>
+              <div class="destaque__info">
+                <div class="linha-nome">
+                  <h3 class="destaque__nome">Lambuzão</h3>
+                  <p class="destaque__preco">R$ 38</p>
+                </div>
+                <p class="destaque__desc">Dois blends de 150 g, cheddar duplo, cebola na chapa e molho da casa.</p>
+              </div>
+              <a class="btn btn--mostarda btn--pedir-este" href="whatsapp/?item=lambuzao">Pedir este</a>
+            </article>
+
+            <div class="lista-lanches">
+              <article class="item">
+                <img class="item__foto" src="assets/img/classico.jpg" width="1000" height="1000" alt="Clássico: hambúrguer com queijo, alface, tomate e picles" loading="lazy">
+                <div class="item__info">
+                  <div class="linha-nome">
+                    <h3 class="item__nome">Clássico</h3>
+                    <p class="item__preco">R$ 29</p>
+                  </div>
+                  <p class="item__desc">Blend de 150 g, queijo prato, alface, tomate, picles e maionese da casa.</p>
+                  <a class="link-sublinhado item__link" href="whatsapp/?item=classico">Pedir este <span aria-hidden="true">→</span></a>
+                </div>
+              </article>
+              <article class="item">
+                <img class="item__foto" src="assets/img/bacon-mel.jpg" width="1000" height="1000" alt="Bacon e Mel: hambúrguer com bacon crocante e cebola caramelizada" loading="lazy">
+                <div class="item__info">
+                  <div class="linha-nome">
+                    <h3 class="item__nome">Bacon &amp; Mel</h3>
+                    <p class="item__preco">R$ 34</p>
+                  </div>
+                  <p class="item__desc">Blend de 150 g, cheddar, bacon crocante, cebola caramelizada e maionese de mostarda e mel.</p>
+                  <a class="link-sublinhado item__link" href="whatsapp/?item=bacon-mel">Pedir este <span aria-hidden="true">→</span></a>
+                </div>
+              </article>
+              <article class="item">
+                <img class="item__foto" src="assets/img/verdinho.jpg" width="1000" height="1000" alt="Verdinho: hambúrguer de grão-de-bico com queijo coalho e rúcula" loading="lazy">
+                <div class="item__info">
+                  <div class="linha-nome">
+                    <div class="item__nome-grupo">
+                      <h3 class="item__nome">Verdinho</h3>
+                      <span class="tag-veg">Vegetariano</span>
+                    </div>
+                    <p class="item__preco">R$ 31</p>
+                  </div>
+                  <p class="item__desc">Burger de grão-de-bico, queijo coalho na chapa, rúcula, picles e maionese de ervas.</p>
+                  <a class="link-sublinhado item__link" href="whatsapp/?item=verdinho">Pedir este <span aria-hidden="true">→</span></a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <div class="painel-aba painel-aba--lista" data-painel="acompanhamentos" role="tabpanel" hidden>
+          <ul class="lista-simples">
+            <li><span>Fritas da casa</span><span class="lista-simples__preco">R$ 14</span></li>
+            <li><span>Onion rings</span><span class="lista-simples__preco">R$ 18</span></li>
+          </ul>
+          <a class="btn btn--mostarda btn--pedir-este" href="whatsapp/">Pedir pelo WhatsApp</a>
+        </div>
+        <div class="painel-aba painel-aba--lista" data-painel="bebidas" role="tabpanel" hidden>
+          <ul class="lista-simples">
+            <li><span>Refri lata</span><span class="lista-simples__preco">R$ 7</span></li>
+            <li><span>Limonada da casa</span><span class="lista-simples__preco">R$ 11</span></li>
+            <li><span>Milkshake de doce de leite</span><span class="lista-simples__preco">R$ 19</span></li>
+          </ul>
+          <a class="btn btn--mostarda btn--pedir-este" href="whatsapp/">Pedir pelo WhatsApp</a>
+        </div>
+        <div class="painel-aba painel-aba--lista" data-painel="combos" role="tabpanel" hidden>
+          <ul class="lista-simples">
+            <li><span>Qualquer lanche + fritas da casa + refri lata</span><span class="lista-simples__preco">+ R$ 16</span></li>
+            <li><span>Trocar o refri pela limonada da casa</span><span class="lista-simples__preco">+ R$ 4</span></li>
+          </ul>
+          <a class="btn btn--mostarda btn--pedir-este" href="whatsapp/">Pedir um combo</a>
+        </div>
+
+        <div class="extras">
+          <p class="extras__rotulo">Pra acompanhar</p>
+          <ul class="extras__chips">
+            <li class="chip"><span>Fritas da casa</span><span class="chip__preco">R$ 14</span></li>
+            <li class="chip"><span>Onion rings</span><span class="chip__preco">R$ 18</span></li>
+            <li class="chip"><span>Refri lata</span><span class="chip__preco">R$ 7</span></li>
+            <li class="chip"><span>Limonada da casa</span><span class="chip__preco">R$ 11</span></li>
+            <li class="chip"><span>Milkshake de doce de leite</span><span class="chip__preco">R$ 19</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="combo" aria-label="Combo">
+      <div class="wrap combo__wrap">
+        <div class="combo__info">
+          <img class="combo__foto" src="assets/img/fritas.jpg" width="1000" height="753" alt="Fritas da casa num copo de papel vermelho" loading="lazy">
+          <div class="combo__texto">
+            <p class="combo__titulo">Vira combo por + R$ 16</p>
+            <p class="combo__desc">Fritas da casa e refri lata, em qualquer lanche.</p>
+          </div>
+        </div>
+        <a class="btn btn--chapa combo__btn" href="whatsapp/">Pedir um combo</a>
+      </div>
+    </section>
+
+    <section class="como-pedir" id="como-pedir" aria-labelledby="como-pedir-titulo">
+      <div class="wrap como-pedir__wrap">
+        <div class="cabecalho">
+          <p class="sobretitulo sobretitulo--mostarda">Como pedir</p>
+          <h2 class="titulo-secao como-pedir__titulo" id="como-pedir-titulo">No balcão tem <span>totem</span>. Em casa tem <span>WhatsApp</span>.</h2>
+        </div>
+        <div class="canais">
+          <article class="canal canal--balcao">
+            <svg class="canal__ilustra" viewBox="0 0 150 240" aria-hidden="true"><rect x="20" y="4" width="110" height="196" rx="18" fill="#FFFFFF" stroke="#1A1310" stroke-width="4"/><rect x="32" y="18" width="86" height="130" rx="8" fill="#F4B400" stroke="#1A1310" stroke-width="3"/><circle cx="75" cy="62" r="20" fill="#D7301C" stroke="#1A1310" stroke-width="3"/><rect x="44" y="96" width="62" height="10" rx="5" fill="#1A1310"/><rect x="52" y="114" width="46" height="18" rx="9" fill="#FFFFFF" stroke="#1A1310" stroke-width="3"/><rect x="50" y="162" width="50" height="22" rx="4" fill="#1A1310"/><rect x="60" y="200" width="30" height="24" fill="#1A1310"/><rect x="36" y="222" width="78" height="14" rx="7" fill="#1A1310"/></svg>
+            <div class="canal__texto">
+              <p class="canal__rotulo">No balcão</p>
+              <h3 class="canal__titulo">Monte, pague e pegue a senha</h3>
+              <p class="canal__desc">Monte o lanche no totem, pague ali mesmo e espere sua senha aparecer no painel.</p>
+              <a class="link-sublinhado canal__link" href="totem/">Ver o totem <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+          <article class="canal canal--casa">
+            <svg class="canal__ilustra" viewBox="0 0 150 240" aria-hidden="true"><rect x="22" y="4" width="106" height="226" rx="20" fill="#1A1310"/><rect x="30" y="14" width="90" height="206" rx="14" fill="#EFEAE2"/><rect x="30" y="14" width="90" height="28" rx="14" fill="#1A1310"/><rect x="38" y="54" width="58" height="22" rx="8" fill="#FFFFFF" stroke="#1A1310" stroke-width="2"/><rect x="54" y="84" width="58" height="22" rx="8" fill="#D9FDD3" stroke="#1A1310" stroke-width="2"/><rect x="38" y="114" width="66" height="34" rx="8" fill="#FFFFFF" stroke="#1A1310" stroke-width="2"/><rect x="44" y="156" width="62" height="18" rx="9" fill="#F4B400" stroke="#1A1310" stroke-width="2"/><rect x="44" y="180" width="62" height="18" rx="9" fill="#F4B400" stroke="#1A1310" stroke-width="2"/></svg>
+            <div class="canal__texto">
+              <p class="canal__rotulo">Em casa</p>
+              <h3 class="canal__titulo">Mande um oi e escolha</h3>
+              <p class="canal__desc">Escolha pelo cardápio na conversa e receba a confirmação com o tempo de entrega.</p>
+              <a class="link-sublinhado canal__link" href="whatsapp/">Pedir pelo WhatsApp <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="onde-fica" id="onde-fica" aria-labelledby="onde-fica-titulo">
+      <div class="wrap onde-fica__wrap">
+        <div class="onde-fica__info">
+          <div class="cabecalho">
+            <p class="sobretitulo">Onde fica</p>
+            <h2 class="titulo-secao" id="onde-fica-titulo">Chapa ligada</h2>
+          </div>
+          <dl class="horario">
+            <div class="horario__linha"><dt>Segunda</dt><dd class="horario__fechado">Fechado</dd></div>
+            <div class="horario__linha"><dt>Terça a quinta</dt><dd>18h às 23h</dd></div>
+            <div class="horario__linha"><dt>Sexta e sábado</dt><dd>18h à 0h</dd></div>
+            <div class="horario__linha"><dt>Domingo</dt><dd>18h às 22h30</dd></div>
+          </dl>
+          <address class="endereco">
+            <span class="endereco__rua">Rua Dona Brasa, 318 · Rebouças</span>
+            <span>Curitiba/PR · retirada no balcão e entrega no Rebouças e arredores</span>
+            <span>WhatsApp +55 41 90000-0001</span>
+          </address>
+        </div>
+        <div class="mapa" role="img" aria-label="Mapa ilustrativo com a Lambuza Burger marcada. Endereço fictício.">
+          <svg class="mapa__ruas" width="640" height="460" viewBox="0 0 640 460" aria-hidden="true"><rect x="0" y="0" width="640" height="460" fill="#F2EFEA"/><rect x="40" y="40" width="150" height="110" rx="10" fill="#E6E1D9"/><rect x="230" y="40" width="170" height="110" rx="10" fill="#E6E1D9"/><rect x="440" y="40" width="170" height="110" rx="10" fill="#DCE8D2"/><rect x="40" y="200" width="150" height="220" rx="10" fill="#E6E1D9"/><rect x="230" y="200" width="170" height="90" rx="10" fill="#E6E1D9"/><rect x="230" y="330" width="170" height="90" rx="10" fill="#E6E1D9"/><rect x="440" y="200" width="170" height="220" rx="10" fill="#E6E1D9"/><path d="M0 175 H640" stroke="#FFFFFF" stroke-width="30"/><path d="M210 0 V460" stroke="#FFFFFF" stroke-width="26"/><path d="M420 0 V460" stroke="#FFFFFF" stroke-width="26"/><path d="M210 310 H640" stroke="#FFFFFF" stroke-width="18"/><path d="M0 460 L640 120" stroke="#FFFFFF" stroke-width="14" opacity="0.8"/></svg>
+          <div class="mapa__pino" aria-hidden="true">
+            <span class="mapa__nome">Lambuza Burger</span>
+            <svg width="44" height="56" viewBox="0 0 44 56"><path d="M22 2C10.4 2 2 10.6 2 22c0 15 20 32 20 32s20-17 20-32C42 10.6 33.6 2 22 2Z" fill="#D7301C" stroke="#1A1310" stroke-width="3"/><circle cx="22" cy="22" r="7" fill="#F4B400" stroke="#1A1310" stroke-width="3"/></svg>
+          </div>
+          <p class="mapa__legenda" aria-hidden="true">Mapa ilustrativo · endereço fictício</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-final" aria-labelledby="cta-final-titulo">
+      <div class="wrap cta-final__wrap">
+        <h2 class="cta-final__titulo" id="cta-final-titulo">Bateu a fome?</h2>
+        <a class="btn btn--mostarda btn--sombra cta-final__btn" href="whatsapp/">
+          <svg class="icone-whats" viewBox="0 0 256 256" aria-hidden="true"><path fill="#1A1310" d="M187.58 144.84l-32-16a8 8 0 0 0-8 .5l-14.69 9.8a40.55 40.55 0 0 1-16-16l9.8-14.69a8 8 0 0 0 .5-8l-16-32A8 8 0 0 0 104 64a40 40 0 0 0-40 40 88.1 88.1 0 0 0 88 88 40 40 0 0 0 40-40 8 8 0 0 0-4.42-7.16ZM152 176a72.08 72.08 0 0 1-72-72 24 24 0 0 1 19.29-23.54l11.48 23L101 118a8 8 0 0 0-.73 7.51 56.47 56.47 0 0 0 30.15 30.15A8 8 0 0 0 138 155l14.61-9.74 23 11.48A24 24 0 0 1 152 176ZM128 24a104 104 0 0 0-91.82 152.88l-11.35 34.05a16 16 0 0 0 20.24 20.24l34.05-11.35A104 104 0 1 0 128 24Zm0 192a87.87 87.87 0 0 1-44.06-11.81 8 8 0 0 0-6.54-.67L40 216l12.47-37.4a8 8 0 0 0-.66-6.54A88 88 0 1 1 128 216Z"/></svg>
+          Pedir pelo WhatsApp
+        </a>
+        <p class="cta-final__sub">Ou passe no balcão e peça no <a class="cta-final__link" href="totem/">totem</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="wrap rodape__wrap">
+      <div class="rodape__marca">
+        <p class="rodape__logo">Lambuza</p>
+        <p class="rodape__aviso">Lambuza Burger é uma marca fictícia, criada pela WeBuild como demonstração.</p>
+      </div>
+      <div class="rodape__colunas">
+        <div class="rodape__col"><p class="rodape__rotulo">Endereço</p><p>Rua Dona Brasa, 318<br class="quebra"><span class="ponto"> · </span>Rebouças · Curitiba/PR</p></div>
+        <div class="rodape__col"><p class="rodape__rotulo">Horário</p><p>Ter a dom, a partir das 18h<br class="quebra"><span class="ponto"> · </span>Segunda fechado</p></div>
+        <div class="rodape__col"><p class="rodape__rotulo">WhatsApp</p><p>+55 41 90000-0001</p></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/demo-bar.js"></script>
+  <script src="assets/js/landing.js"></script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Totem · Lambuza Burger (conceito WeBuild)</title>
+  <meta name="description" content="Totem de autoatendimento simulado da Lambuza Burger: monte o lanche, escolha o combo, pague (de mentirinha) e receba a senha.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Geist+Mono:wght@400;500&family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/totem.css">
+</head>
+<body class="pagina-totem">
+  <div class="demo-bar">
+    <span class="demo-bar__brand">Conceito WeBuild</span>
+    <nav class="demo-bar__links" aria-label="Partes da demonstração">
+      <a href="../">Landing</a><span class="demo-bar__sep" aria-hidden="true">·</span>
+      <a href="./" aria-current="page">Totem</a><span class="demo-bar__sep" aria-hidden="true">·</span>
+      <a href="../whatsapp/">WhatsApp</a><span class="demo-bar__sep" aria-hidden="true">·</span>
+      <a href="../bastidores/">Bastidores</a>
+    </nav>
+    <a class="demo-bar__back" href="../../../#portfolio"><span aria-hidden="true">←</span> <span class="demo-bar__back-text">Portfólio</span></a>
+  </div>
+
+  <main class="palco">
+    <div class="palco__legenda">
+      <h1 class="palco__titulo">Totem de autoatendimento</h1>
+      <p class="palco__texto">Toque na tela e faça um pedido no balcão do começo ao fim: lanche, ponto da carne, adicionais, combo, pagamento e senha.</p>
+      <p class="palco__nota">O pagamento é simulado. Nada é cobrado.</p>
+      <button class="btn btn--contorno-branco palco__reiniciar" type="button" data-acao="reiniciar">Recomeçar o totem</button>
+    </div>
+
+    <div class="moldura" id="moldura">
+      <div class="moldura__corpo">
+        <div class="moldura__tela">
+          <div class="kiosk" id="kiosk" data-tela="descanso">
+
+            <!-- Topo (todas as telas, menos descanso e senha) -->
+            <header class="k-topo">
+              <span class="logo k-topo__logo" aria-label="Lambuza Burger">Lambuza<svg class="logo__drip" viewBox="0 0 64 22" aria-hidden="true"><path d="M0 4 C0 1.8 1.8 0 4 0 H60 C62.2 0 64 1.8 64 4 C64 6 62.5 7.5 60.5 7.8 C58 8.2 57 10 57 12 V15 C57 17.2 55.2 19 53 19 C50.8 19 49 17.2 49 15 V12 C49 10 47.5 8.5 45.5 8.5 H24 C22 8.5 20.5 10 20.5 12 V18 C20.5 20.2 18.7 22 16.5 22 C14.3 22 12.5 20.2 12.5 18 V12 C12.5 10 11 8.5 9 8.2 L4 7.8 C1.8 7.6 0 6 0 4 Z" fill="#F4B400"/></svg></span>
+              <div class="k-topo__acoes">
+                <button class="k-pilula k-pilula--contorno" type="button" data-acao="trocar-modo" aria-label="Trocar entre comer aqui e levar"><span data-texto="modo">Comer aqui</span></button>
+                <button class="k-pilula k-pilula--chapa" type="button" data-acao="reiniciar">Cancelar</button>
+              </div>
+            </header>
+
+            <div class="k-telas">
+              <!-- 1. Descanso -->
+              <section class="tela tela--descanso" data-tela="descanso" aria-label="Início">
+                <span class="logo k-descanso__logo" aria-label="Lambuza Burger">Lambuza<svg class="logo__drip" viewBox="0 0 64 22" aria-hidden="true"><path d="M0 4 C0 1.8 1.8 0 4 0 H60 C62.2 0 64 1.8 64 4 C64 6 62.5 7.5 60.5 7.8 C58 8.2 57 10 57 12 V15 C57 17.2 55.2 19 53 19 C50.8 19 49 17.2 49 15 V12 C49 10 47.5 8.5 45.5 8.5 H24 C22 8.5 20.5 10 20.5 12 V18 C20.5 20.2 18.7 22 16.5 22 C14.3 22 12.5 20.2 12.5 18 V12 C12.5 10 11 8.5 9 8.2 L4 7.8 C1.8 7.6 0 6 0 4 Z" fill="#F4B400"/></svg></span>
+                <div class="k-descanso__foto">
+                  <img src="../assets/img/hero.jpg" width="880" height="1168" alt="Hambúrguer duplo com cheddar escorrendo, em close">
+                  <div class="k-descanso__selo" aria-hidden="true"><span class="k-descanso__selo-nome">Lambuzão</span><span class="k-descanso__selo-valor">R$ 38</span><span class="k-descanso__selo-nota">o da casa</span></div>
+                </div>
+                <div class="k-descanso__base">
+                  <h2 class="k-descanso__titulo">Toque para pedir</h2>
+                  <div class="k-descanso__botoes">
+                    <button class="k-modo k-modo--mostarda" type="button" data-acao="comecar" data-modo="aqui"><span class="k-modo__nome">Comer aqui</span><span class="k-modo__nota">a gente chama pela senha</span></button>
+                    <button class="k-modo k-modo--branco" type="button" data-acao="comecar" data-modo="levar"><span class="k-modo__nome">Levar</span><span class="k-modo__nota">vai embalado pra viagem</span></button>
+                  </div>
+                  <p class="k-descanso__nota">Pague aqui mesmo com Pix ou cartão</p>
+                </div>
+              </section>
+
+              <!-- 2. Cardápio -->
+              <section class="tela tela--cardapio" data-tela="cardapio" aria-label="Cardápio">
+                <div class="k-corpo k-corpo--cardapio">
+                  <nav class="k-categorias" aria-label="Categorias" data-lista="categorias"></nav>
+                  <div class="k-lanches">
+                    <div class="k-cabecalho">
+                      <h2 class="k-titulo-72" data-texto="categoria-titulo">Lanches</h2>
+                      <p class="k-sub" data-texto="categoria-sub">Toque no lanche para montar do seu jeito.</p>
+                    </div>
+                    <div class="k-grade" data-lista="produtos"></div>
+                  </div>
+                </div>
+              </section>
+
+              <!-- 3. Monte o lanche -->
+              <section class="tela tela--monte" data-tela="monte" aria-label="Monte o lanche">
+                <div class="k-corpo">
+                  <div class="k-bloco">
+                    <button class="k-voltar" type="button" data-acao="ir" data-destino="cardapio">← Lanches</button>
+                    <div class="k-produto">
+                      <img class="k-produto__foto" data-img="produto" src="../assets/img/lambuzao.jpg" width="1000" height="1000" alt="">
+                      <div class="k-produto__info">
+                        <h2 class="k-titulo-72" data-texto="produto-nome">Lambuzão</h2>
+                        <p class="k-sub k-sub--forte" data-texto="produto-desc"></p>
+                        <p class="k-preco-44" data-texto="produto-preco"></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="k-secao" data-bloco="ponto">
+                    <h3 class="k-titulo-48">Como você quer a carne?</h3>
+                    <div class="k-opcoes" data-lista="pontos"></div>
+                  </div>
+                  <div class="k-secao k-secao--adicionais">
+                    <h3 class="k-titulo-48 k-titulo-48--espaco">Adicionais</h3>
+                    <div class="k-adicionais" data-lista="adicionais"></div>
+                    <div class="k-retirar">
+                      <p class="k-retirar__rotulo">Tirar algo?</p>
+                      <div class="k-retirar__chips" data-lista="retirar"></div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <!-- 4. Combo -->
+              <section class="tela tela--combo" data-tela="combo" aria-label="Combo">
+                <div class="k-corpo">
+                  <div class="k-bloco k-bloco--20">
+                    <button class="k-voltar" type="button" data-acao="ir" data-destino="monte"><span data-texto="voltar-combo">← Lambuzão</span></button>
+                    <h2 class="k-titulo-80">Vira combo por <span class="k-tomate">+ R$ 16</span>?</h2>
+                  </div>
+                  <div class="k-combo">
+                    <button class="k-combo__sim" type="button" data-acao="combo" data-valor="sim" aria-pressed="false">
+                      <img class="k-combo__foto" src="../assets/img/fritas.jpg" width="1000" height="753" alt="">
+                      <span class="k-combo__linha"><span class="k-check" aria-hidden="true">✓</span><span class="k-combo__nome">Sim, quero combo</span></span>
+                      <span class="k-combo__nota">Fritas da casa e uma bebida</span>
+                    </button>
+                    <button class="k-combo__nao" type="button" data-acao="combo" data-valor="nao" aria-pressed="false">
+                      <span class="k-combo__nao-nome">Só o lanche</span>
+                      <span class="k-combo__nao-nota">sem fritas e bebida</span>
+                    </button>
+                  </div>
+                  <div class="k-secao" data-bloco="bebidas">
+                    <h3 class="k-titulo-48">Escolha a bebida</h3>
+                    <div class="k-bebidas" data-lista="bebidas"></div>
+                  </div>
+                </div>
+              </section>
+
+              <!-- 5. Revisão -->
+              <section class="tela tela--revisao" data-tela="revisao" aria-label="Revisão do pedido">
+                <div class="k-corpo k-corpo--40">
+                  <div class="k-bloco k-bloco--20">
+                    <button class="k-voltar" type="button" data-acao="ir" data-destino="cardapio">← Cardápio</button>
+                    <h2 class="k-titulo-80">Confere o pedido</h2>
+                  </div>
+                  <div class="k-itens" data-lista="itens"></div>
+                  <div class="k-sugestao" data-bloco="sugestao">
+                    <div class="k-sugestao__texto"><p class="k-sugestao__rotulo">Pra fechar</p><p class="k-sugestao__nome">Milkshake de doce de leite · R$ 19</p></div>
+                    <button class="k-sugestao__btn" type="button" data-acao="milkshake">+ Adicionar</button>
+                  </div>
+                  <div class="k-resumo">
+                    <div class="k-resumo__linha"><span>Onde</span><strong data-texto="resumo-modo">Comer aqui</strong></div>
+                    <div class="k-resumo__linha"><span>Itens</span><strong data-texto="resumo-itens">0</strong></div>
+                    <button class="k-mais" type="button" data-acao="ir" data-destino="cardapio">Adicionar mais itens</button>
+                  </div>
+                </div>
+              </section>
+
+              <!-- 6. Pagamento -->
+              <section class="tela tela--pagamento" data-tela="pagamento" aria-label="Pagamento">
+                <div class="k-corpo k-corpo--40">
+                  <div class="k-bloco k-bloco--20">
+                    <button class="k-voltar" type="button" data-acao="ir" data-destino="revisao">← Pedido</button>
+                    <h2 class="k-titulo-80">Como você quer pagar?</h2>
+                  </div>
+                  <p class="k-aviso"><span class="k-aviso__ponto" aria-hidden="true"></span>Pagamento simulado · nada é cobrado</p>
+                  <div class="k-formas" data-lista="formas"></div>
+                  <div class="k-pix" data-bloco="pix">
+                    <div class="k-pix__qr">
+                      <svg viewBox="0 0 300 300" aria-label="QR code fictício" role="img"><rect width="300" height="300" fill="#FFFFFF"/><path d="M0 96h12v12h-12zM0 108h12v12h-12zM0 120h12v12h-12zM0 132h12v12h-12zM0 156h12v12h-12zM0 168h12v12h-12zM0 180h12v12h-12zM0 192h12v12h-12zM12 96h12v12h-12zM12 108h12v12h-12zM12 192h12v12h-12zM24 108h12v12h-12zM24 132h12v12h-12zM24 144h12v12h-12zM36 96h12v12h-12zM36 132h12v12h-12zM36 144h12v12h-12zM36 156h12v12h-12zM36 168h12v12h-12zM36 192h12v12h-12zM48 144h12v12h-12zM60 96h12v12h-12zM60 120h12v12h-12zM60 144h12v12h-12zM60 168h12v12h-12zM60 180h12v12h-12zM72 96h12v12h-12zM72 156h12v12h-12zM84 108h12v12h-12zM84 156h12v12h-12zM84 168h12v12h-12zM96 12h12v12h-12zM96 36h12v12h-12zM96 48h12v12h-12zM96 96h12v12h-12zM96 132h12v12h-12zM96 144h12v12h-12zM96 156h12v12h-12zM96 168h12v12h-12zM96 216h12v12h-12zM96 240h12v12h-12zM96 252h12v12h-12zM96 276h12v12h-12zM96 288h12v12h-12zM108 0h12v12h-12zM108 12h12v12h-12zM108 24h12v12h-12zM108 36h12v12h-12zM108 48h12v12h-12zM108 60h12v12h-12zM108 72h12v12h-12zM108 156h12v12h-12zM108 168h12v12h-12zM108 204h12v12h-12zM108 240h12v12h-12zM108 252h12v12h-12zM108 264h12v12h-12zM108 276h12v12h-12zM108 288h12v12h-12zM120 12h12v12h-12zM120 96h12v12h-12zM120 204h12v12h-12zM120 216h12v12h-12zM120 228h12v12h-12zM120 264h12v12h-12zM120 288h12v12h-12zM132 0h12v12h-12zM132 36h12v12h-12zM132 72h12v12h-12zM132 180h12v12h-12zM132 192h12v12h-12zM132 216h12v12h-12zM132 228h12v12h-12zM132 240h12v12h-12zM132 252h12v12h-12zM132 264h12v12h-12zM132 276h12v12h-12zM144 36h12v12h-12zM144 60h12v12h-12zM144 72h12v12h-12zM144 96h12v12h-12zM144 252h12v12h-12zM156 0h12v12h-12zM156 36h12v12h-12zM156 72h12v12h-12zM156 84h12v12h-12zM156 192h12v12h-12zM156 204h12v12h-12zM156 252h12v12h-12zM156 264h12v12h-12zM156 276h12v12h-12zM168 24h12v12h-12zM168 48h12v12h-12zM168 72h12v12h-12zM168 84h12v12h-12zM168 96h12v12h-12zM168 216h12v12h-12zM168 228h12v12h-12zM168 252h12v12h-12zM180 12h12v12h-12zM180 24h12v12h-12zM180 120h12v12h-12zM180 156h12v12h-12zM180 168h12v12h-12zM180 192h12v12h-12zM180 204h12v12h-12zM180 216h12v12h-12zM180 228h12v12h-12zM180 240h12v12h-12zM180 264h12v12h-12zM180 276h12v12h-12zM180 288h12v12h-12zM192 0h12v12h-12zM192 12h12v12h-12zM192 72h12v12h-12zM192 96h12v12h-12zM192 120h12v12h-12zM192 168h12v12h-12zM192 192h12v12h-12zM192 216h12v12h-12zM192 240h12v12h-12zM192 264h12v12h-12zM204 108h12v12h-12zM204 144h12v12h-12zM204 156h12v12h-12zM204 180h12v12h-12zM204 192h12v12h-12zM204 252h12v12h-12zM204 288h12v12h-12zM216 120h12v12h-12zM216 144h12v12h-12zM216 216h12v12h-12zM216 228h12v12h-12zM216 252h12v12h-12zM216 276h12v12h-12zM228 108h12v12h-12zM228 120h12v12h-12zM228 132h12v12h-12zM228 144h12v12h-12zM228 168h12v12h-12zM228 204h12v12h-12zM228 216h12v12h-12zM228 228h12v12h-12zM228 240h12v12h-12zM228 264h12v12h-12zM228 276h12v12h-12zM240 144h12v12h-12zM240 192h12v12h-12zM240 216h12v12h-12zM240 228h12v12h-12zM240 264h12v12h-12zM240 288h12v12h-12zM252 120h12v12h-12zM252 144h12v12h-12zM252 156h12v12h-12zM252 180h12v12h-12zM252 240h12v12h-12zM252 288h12v12h-12zM264 108h12v12h-12zM264 120h12v12h-12zM264 180h12v12h-12zM264 216h12v12h-12zM264 252h12v12h-12zM264 264h12v12h-12zM264 276h12v12h-12zM264 288h12v12h-12zM276 108h12v12h-12zM276 168h12v12h-12zM276 192h12v12h-12zM276 204h12v12h-12zM276 216h12v12h-12zM276 252h12v12h-12zM288 96h12v12h-12zM288 108h12v12h-12zM288 120h12v12h-12zM288 132h12v12h-12zM288 144h12v12h-12zM288 168h12v12h-12zM288 228h12v12h-12zM288 264h12v12h-12zM288 276h12v12h-12zM288 288h12v12h-12z" fill="#1A1310"/><rect x="6" y="6" width="72" height="72" fill="none" stroke="#1A1310" stroke-width="12"/><rect x="24" y="24" width="36" height="36" fill="#1A1310"/><rect x="222" y="6" width="72" height="72" fill="none" stroke="#1A1310" stroke-width="12"/><rect x="240" y="24" width="36" height="36" fill="#1A1310"/><rect x="6" y="222" width="72" height="72" fill="none" stroke="#1A1310" stroke-width="12"/><rect x="24" y="240" width="36" height="36" fill="#1A1310"/><rect x="114" y="114" width="72" height="72" rx="16" fill="#D7301C"/><circle cx="150" cy="150" r="16" fill="#F4B400"/></svg>
+                    </div>
+                    <div class="k-pix__texto">
+                      <p class="k-titulo-44">Abra o app do banco e aponte a câmera</p>
+                      <p class="k-sub k-sub--forte">O QR code é de mentirinha. Toque em "Simular pagamento" para seguir.</p>
+                      <p class="k-pix__expira">Expira em <span data-texto="expira">4:59</span></p>
+                    </div>
+                  </div>
+                  <div class="k-pix k-cartao" data-bloco="cartao" hidden>
+                    <svg class="k-cartao__ilustra" viewBox="0 0 220 300" aria-hidden="true"><rect x="30" y="20" width="160" height="260" rx="24" fill="#1A1310"/><rect x="48" y="44" width="124" height="80" rx="10" fill="#7FD49B"/><g fill="#FFFFFF"><rect x="52" y="146" width="32" height="24" rx="6"/><rect x="94" y="146" width="32" height="24" rx="6"/><rect x="136" y="146" width="32" height="24" rx="6"/><rect x="52" y="180" width="32" height="24" rx="6"/><rect x="94" y="180" width="32" height="24" rx="6"/><rect x="136" y="180" width="32" height="24" rx="6"/><rect x="52" y="214" width="32" height="24" rx="6"/><rect x="94" y="214" width="32" height="24" rx="6"/><rect x="136" y="214" width="32" height="24" rx="6" fill="#447F2A"/></g><rect x="70" y="0" width="120" height="76" rx="10" fill="#F4B400" stroke="#1A1310" stroke-width="4" transform="rotate(-12 130 38)"/><rect x="88" y="16" width="26" height="20" rx="4" fill="#D7301C" transform="rotate(-12 130 38)"/></svg>
+                    <div class="k-pix__texto">
+                      <p class="k-titulo-44">Aproxime, insira ou passe o cartão na maquininha</p>
+                      <p class="k-sub k-sub--forte">A maquininha fica logo abaixo da tela. Nesta demonstração, toque em "Simular pagamento".</p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <!-- 7. Senha -->
+              <section class="tela tela--senha" data-tela="senha" aria-label="Senha do pedido">
+                <span class="logo k-descanso__logo" aria-label="Lambuza Burger">Lambuza<svg class="logo__drip" viewBox="0 0 64 22" aria-hidden="true"><path d="M0 4 C0 1.8 1.8 0 4 0 H60 C62.2 0 64 1.8 64 4 C64 6 62.5 7.5 60.5 7.8 C58 8.2 57 10 57 12 V15 C57 17.2 55.2 19 53 19 C50.8 19 49 17.2 49 15 V12 C49 10 47.5 8.5 45.5 8.5 H24 C22 8.5 20.5 10 20.5 12 V18 C20.5 20.2 18.7 22 16.5 22 C14.3 22 12.5 20.2 12.5 18 V12 C12.5 10 11 8.5 9 8.2 L4 7.8 C1.8 7.6 0 6 0 4 Z" fill="#F4B400"/></svg></span>
+                <div class="k-senha__meio">
+                  <p class="k-senha__status"><span class="k-senha__check" aria-hidden="true">✓</span>Pedido pago e enviado pra cozinha</p>
+                  <h2 class="k-senha__titulo">Sua senha é</h2>
+                  <p class="k-senha__numero" data-texto="senha" aria-live="polite">047</p>
+                  <p class="k-senha__texto">A gente chama no painel quando sair da chapa.</p>
+                </div>
+                <div class="k-senha__base">
+                  <div class="k-recibo" data-lista="recibo"></div>
+                  <button class="k-novo" type="button" data-acao="reiniciar">Fazer novo pedido</button>
+                  <p class="k-senha__contagem">A tela volta pro início em <span data-texto="contagem">15</span> segundos</p>
+                </div>
+              </section>
+            </div>
+
+            <!-- Barra do pedido (todas as telas, menos descanso e senha) -->
+            <footer class="k-barra">
+              <div class="k-barra__info">
+                <p class="k-barra__rotulo" data-texto="barra-rotulo">Seu pedido</p>
+                <p class="k-barra__valor" data-texto="barra-valor">Nenhum item ainda</p>
+              </div>
+              <button class="k-barra__btn" type="button" data-acao="avancar" data-texto="barra-btn" disabled>Ver pedido</button>
+            </footer>
+
+            <div class="k-toast" data-bloco="toast" role="status" aria-live="polite"></div>
+          </div>
+        </div>
+        <div class="moldura__pe" aria-hidden="true"><span class="moldura__pescoco"></span><span class="moldura__base"></span></div>
+      </div>
+    </div>
+  </main>
+
+  <script src="../assets/js/demo-bar.js"></script>
+  <script src="../assets/js/totem.js"></script>
+</body>
+</html>

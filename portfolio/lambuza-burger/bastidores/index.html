@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Bastidores · Lambuza Burger (simulação)</title>
+  <meta name="description" content="O que roda sozinho depois do pedido na Lambuza Burger, hamburgueria fictícia: tela da cozinha, aviso de entrega e cupom do dia seguinte. Simulação.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Geist+Mono:wght@400;500&family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/bastidores.css">
+</head>
+<body>
+  <div class="demo-bar">
+    <span class="demo-bar__brand">Conceito WeBuild</span>
+    <nav class="demo-bar__links" aria-label="Partes da demonstração">
+      <a href="../">Landing</a><span class="demo-bar__sep" aria-hidden="true">·</span>
+      <a href="../totem/">Totem</a><span class="demo-bar__sep" aria-hidden="true">·</span>
+      <a href="../whatsapp/">WhatsApp</a><span class="demo-bar__sep" aria-hidden="true">·</span>
+      <a href="./" aria-current="page">Bastidores</a>
+    </nav>
+    <a class="demo-bar__back" href="../../../#portfolio"><span aria-hidden="true">←</span> <span class="demo-bar__back-text">Portfólio</span></a>
+  </div>
+
+  <header class="b-topo">
+    <div class="b-wrap b-topo__wrap">
+      <div class="b-topo__marca">
+        <a class="logo b-topo__logo" href="../" aria-label="Lambuza Burger, voltar à landing">Lambuza<svg class="logo__drip" viewBox="0 0 64 22" aria-hidden="true"><path d="M0 4 C0 1.8 1.8 0 4 0 H60 C62.2 0 64 1.8 64 4 C64 6 62.5 7.5 60.5 7.8 C58 8.2 57 10 57 12 V15 C57 17.2 55.2 19 53 19 C50.8 19 49 17.2 49 15 V12 C49 10 47.5 8.5 45.5 8.5 H24 C22 8.5 20.5 10 20.5 12 V18 C20.5 20.2 18.7 22 16.5 22 C14.3 22 12.5 20.2 12.5 18 V12 C12.5 10 11 8.5 9 8.2 L4 7.8 C1.8 7.6 0 6 0 4 Z" fill="#F4B400"/></svg></a>
+        <span class="b-selo">Bastidores · simulação</span>
+      </div>
+      <div class="b-topo__linha">
+        <div class="b-topo__texto">
+          <h1 class="b-titulo">O que roda sozinho depois do pedido</h1>
+          <p class="b-desc" data-texto="descricao">Siga o pedido #2318 do WhatsApp: ele cai na tela da cozinha, o cliente recebe o aviso de entrega e, no dia seguinte, um cupom pra voltar. Ninguém precisa digitar nada.</p>
+        </div>
+        <div class="b-controles">
+          <button class="btn btn--mostarda b-avancar" type="button" data-acao="avancar">Avançar passo <span aria-hidden="true">→</span></button>
+          <button class="btn btn--contorno-branco b-rodar" type="button" data-acao="rodar" aria-pressed="false">Rodar sozinho</button>
+        </div>
+      </div>
+      <div class="b-origem" role="group" aria-label="Pedido de origem">
+        <span class="b-origem__rotulo">Pedido de origem</span>
+        <button class="b-origem__opcao" type="button" data-acao="origem" data-valor="whatsapp">WhatsApp · #2318</button>
+        <button class="b-origem__opcao" type="button" data-acao="origem" data-valor="totem">Totem · senha 047</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="b-painel b-wrap">
+    <ol class="b-linha" data-lista="passos" aria-label="Etapas da automação"></ol>
+
+    <div class="b-progresso" aria-hidden="true" data-lista="progresso"></div>
+    <div class="b-atual" data-bloco="atual" aria-live="polite"></div>
+
+    <div class="b-palco">
+      <section class="b-cozinha" aria-label="Tela da cozinha (simulada)">
+        <div class="b-cozinha__topo">
+          <p class="b-cozinha__nome"><span class="b-cozinha__ponto" aria-hidden="true"></span>Tela da cozinha · Lambuza</p>
+          <p class="b-cozinha__hora" data-texto="hora">20:06</p>
+        </div>
+        <div class="b-cozinha__abas" data-lista="abas" aria-hidden="true"></div>
+        <div class="b-colunas" data-lista="colunas"></div>
+      </section>
+
+      <section class="b-mensagens" aria-label="Mensagens automáticas (simuladas)">
+        <div class="b-mensagens__topo">
+          <p class="b-mensagens__titulo">Mensagens que saem sozinhas</p>
+          <p class="b-mensagens__nota">WhatsApp do cliente · simulado</p>
+        </div>
+        <div class="b-mensagens__lista" data-lista="mensagens"></div>
+      </section>
+    </div>
+  </main>
+
+  <script src="../assets/js/demo-bar.js"></script>
+  <script src="../assets/js/bastidores.js"></script>
+</body>
+</html>
