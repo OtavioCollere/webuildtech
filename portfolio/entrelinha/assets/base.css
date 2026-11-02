@@ -1,0 +1,149 @@
+/* Entrelinha — base compartilhada (landing, totem, whatsapp, bastidores) */
+
+:root {
+  --po: #E9D8CA;            /* pó compacto: fundo dominante */
+  --papel: #F5EDE6;         /* pó translúcido: superfícies */
+  --blush: #D3A9A3;         /* blush: bloco de antes e depois */
+  --blush-escuro: #C49890;
+  --batom: #8A4553;         /* batom: onde se clica */
+  --batom-hover: #763A47;
+  --rimel: #1D1718;         /* rímel: texto e contracapa */
+  --lapis: #66564F;         /* lápis: texto secundário */
+  --bronze: #A95E43;        /* bronzer: só numeração e detalhe */
+  --fio: rgba(29, 23, 24, 0.2);
+  --fio-forte: rgba(29, 23, 24, 0.45);
+
+  --serif: 'Noto Serif Display', 'Didot', Georgia, serif;
+  --sans: 'Jost', 'Futura', system-ui, sans-serif;
+  --mono: 'Geist Mono', ui-monospace, 'SFMono-Regular', monospace;
+
+  --gutter: 80px;
+  --barra: 40px;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: calc(var(--barra) + 16px); }
+
+body {
+  margin: 0;
+  padding-top: var(--barra);
+  background: var(--po);
+  color: var(--rimel);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 28px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, p { margin: 0; font-weight: inherit; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+
+:focus-visible { outline: 2px solid var(--batom); outline-offset: 3px; }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+
+/* ---------- Barra de demonstração (da WeBuild, igual nos três casos) ---------- */
+.demo-bar {
+  position: fixed; inset: 0 0 auto 0; z-index: 100;
+  display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(max-content, 1fr); align-items: center; column-gap: 24px;
+  height: var(--barra); padding: 0 24px;
+  background: #05070F; color: #F4F6FC;
+  font-family: 'Geist Mono', var(--mono); font-size: 12px; line-height: 16px;
+  letter-spacing: 0.14em; text-transform: uppercase;
+}
+.demo-bar a { color: inherit; }
+.demo-bar__links {
+  display: flex; align-items: center; justify-content: center; gap: 14px;
+  white-space: nowrap;
+}
+.demo-bar__links a { color: rgba(244, 246, 252, 0.7); transition: color .15s; }
+.demo-bar__links a:hover { color: #F4F6FC; }
+.demo-bar__links a[aria-current="page"] { color: #7892FF; }
+.demo-bar__sep { color: rgba(244, 246, 252, 0.4); letter-spacing: 0; }
+.demo-bar__brand { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.demo-bar__back { justify-self: end; white-space: nowrap; }
+
+@media (max-width: 760px) {
+  .demo-bar { display: flex; padding: 0; }
+  .demo-bar__brand { display: none; }
+  .demo-bar__links {
+    flex: 1 1 auto; min-width: 0; justify-content: flex-start;
+    height: 100%; padding: 0 16px; overflow-x: auto; scrollbar-width: none;
+  }
+  .demo-bar__links::-webkit-scrollbar { display: none; }
+  .demo-bar__back {
+    display: flex; align-items: center; justify-content: center; flex: 0 0 44px;
+    height: 100%; border-left: 1px solid rgba(244, 246, 252, 0.15);
+  }
+  .demo-bar__back-text { display: none; }
+}
+
+/* ---------- Marca ---------- */
+.logo { display: inline-flex; flex-direction: column; gap: 2px; color: var(--rimel); }
+.logo__palavra {
+  font-family: var(--serif); font-style: italic; font-weight: 300;
+  font-size: 34px; line-height: 38px; letter-spacing: -0.01em;
+}
+.fio-duplo { display: flex; flex-direction: column; gap: 5px; }
+.fio-duplo::before,
+.fio-duplo::after { content: ''; height: 1px; background: currentColor; }
+.logo .fio-duplo { width: 150px; }
+
+/* ---------- Tipos recorrentes ---------- */
+.rotulo {
+  display: flex; align-items: baseline; gap: 20px;
+}
+.folio {
+  font-family: var(--serif); font-style: italic; font-weight: 300;
+  font-size: 24px; line-height: 28px; color: var(--bronze); white-space: nowrap;
+}
+.caps {
+  font-family: var(--sans); font-weight: 500; font-size: 13px; line-height: 16px;
+  letter-spacing: 0.16em; text-transform: uppercase;
+}
+.it { font-style: italic; }
+
+/* ---------- Botões ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 12px;
+  padding: 20px 34px; border-radius: 999px;
+  font-family: var(--sans); font-weight: 500; font-size: 17px; line-height: 20px;
+  transition: background-color .2s, color .2s, border-color .2s;
+}
+.btn--batom { background: var(--batom); color: var(--papel); }
+.btn--batom:hover { background: var(--batom-hover); }
+.btn--papel { background: var(--papel); color: var(--rimel); }
+.btn--papel:hover { background: #fff; }
+.btn--contorno { border: 1px solid var(--fio-forte); color: var(--rimel); }
+.btn--contorno:hover { border-color: var(--rimel); }
+.btn svg { flex-shrink: 0; }
+
+.link-batom {
+  font-family: var(--sans); font-weight: 500; font-size: 16px; line-height: 20px;
+  color: var(--batom);
+}
+.link-batom:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+@media (max-width: 760px) {
+  :root { --gutter: 20px; }
+  body { font-size: 16px; line-height: 26px; }
+  .logo__palavra { font-size: 27px; line-height: 30px; }
+  .logo .fio-duplo { width: 118px; gap: 4px; }
+  .rotulo { gap: 14px; }
+  .folio { font-size: 20px; line-height: 24px; }
+  .caps { font-size: 11px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}

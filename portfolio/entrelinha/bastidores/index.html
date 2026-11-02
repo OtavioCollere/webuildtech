@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Bastidores da automação · Entrelinha · Conceito WeBuild</title>
+<meta name="description" content="Simulação do que roda sozinho depois que um horário é marcado no estúdio fictício Entrelinha: confirmação, remarcação, cuidados e aviso de manutenção.">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Jost:wght@300;400;500&family=Noto+Serif+Display:ital,wght@0,200;0,300;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/base.css">
+<link rel="stylesheet" href="../assets/bastidores.css">
+</head>
+<body>
+
+<nav class="demo-bar" aria-label="Navegação da demonstração WeBuild">
+  <span class="demo-bar__brand">Conceito WeBuild</span>
+  <div class="demo-bar__links">
+    <a href="../">Landing</a><span class="demo-bar__sep" aria-hidden="true">·</span>
+    <a href="../totem/">Totem</a><span class="demo-bar__sep" aria-hidden="true">·</span>
+    <a href="../whatsapp/">WhatsApp</a><span class="demo-bar__sep" aria-hidden="true">·</span>
+    <a href="./" aria-current="page">Bastidores</a>
+  </div>
+  <a class="demo-bar__back" href="../../../#portfolio" aria-label="Voltar para o portfólio da WeBuild"><span aria-hidden="true">←</span><span class="demo-bar__back-text">&nbsp;Portfólio</span></a>
+</nav>
+
+<header class="b-cabeca">
+  <div class="b-cabeca__linha">
+    <div class="b-marca">
+      <a class="logo logo--b" href="../" aria-label="Entrelinha, voltar para a landing"><span class="logo__palavra">entrelinha</span><span class="fio-duplo" aria-hidden="true"></span></a>
+      <span class="caps b-painel">Painel do estúdio</span>
+    </div>
+    <span class="selo-sim"><i aria-hidden="true"></i>Simulação</span>
+  </div>
+  <div class="b-cabeca__linha b-cabeca__linha--fim">
+    <div class="b-titulo-bloco">
+      <p class="rotulo"><span class="folio">Nº 08</span><span class="caps">Bastidores<span class="so-celular"> · painel do estúdio</span></span></p>
+      <h1 class="b-titulo">O que roda sozinho depois que o horário <span class="it">é marcado.</span></h1>
+    </div>
+    <div class="b-controles">
+      <div class="b-controles__botoes">
+        <button class="btn btn--contorno b-recomecar" type="button" id="recomecar">
+          <svg class="so-celular-flex" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.4-5.7M4 4v4.5h4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="b-recomecar__texto">Recomeçar</span>
+        </button>
+        <button class="btn btn--batom b-rodar" type="button" id="rodar">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 2.5v11l9-5.5Z" fill="currentColor"/></svg>
+          Rodar próximo passo
+        </button>
+      </div>
+      <span class="b-status" id="status" aria-live="polite">Passo 1 de 4 · próximo: confirmação 24 h antes</span>
+    </div>
+  </div>
+</header>
+
+<main class="b-painel-grade">
+  <ol class="linha-tempo" id="linha">
+    <li class="passo" data-passo="1">
+      <div class="passo__trilho"><span class="passo__marca"><svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 9.5l3.2 3.2L14 5.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="passo__linha"></span></div>
+      <div class="passo__corpo">
+        <div class="passo__topo"><span class="caps passo__quando">Agora · ter, 3/11, 14h03</span><span class="passo__estado">Feito</span></div>
+        <h2 class="passo__titulo">Horário marcado</h2>
+        <p class="passo__desc">A agenda da Marina é atualizada e a confirmação sai no WhatsApp.</p>
+        <div class="previa"><span data-texto="msg1">Marcado: extensão de cílios fio a fio com a Marina, quinta, 5/11, às 14h30. Venha sem rímel.</span></div>
+      </div>
+    </li>
+    <li class="passo" data-passo="2">
+      <div class="passo__trilho"><span class="passo__marca"><svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 9.5l3.2 3.2L14 5.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="passo__linha"></span></div>
+      <div class="passo__corpo">
+        <div class="passo__topo"><span class="caps passo__quando">24 h antes · qua, 4/11, 14h30</span><span class="passo__estado">Agendado</span></div>
+        <h2 class="passo__titulo">Confirmação com opção de remarcar</h2>
+        <p class="passo__desc">Quem não pode vir remarca ali mesmo, e o horário volta para a agenda a tempo de outra cliente ocupar.<span class="so-desktop"> É aqui que caem as faltas.</span></p>
+        <div class="previa">Amanhã, 14h30, extensão de cílios com a Marina. Venha sem rímel.</div>
+        <div class="resposta" id="resposta">
+          <div class="resposta__botoes">
+            <button type="button" class="resposta__btn" data-resposta="confirmo">Confirmo</button>
+            <button type="button" class="resposta__btn" data-resposta="remarcar">Preciso remarcar</button>
+          </div>
+          <div class="resposta__fala" id="fala"></div>
+        </div>
+      </div>
+    </li>
+    <li class="passo" data-passo="3">
+      <div class="passo__trilho"><span class="passo__marca"><svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 9.5l3.2 3.2L14 5.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="passo__linha"></span></div>
+      <div class="passo__corpo">
+        <div class="passo__topo"><span class="caps passo__quando" data-texto="quando3">2 h depois · qui, 5/11, 18h30</span><span class="passo__estado">Agendado</span></div>
+        <h2 class="passo__titulo">Cuidados por escrito</h2>
+        <p class="passo__desc">Sai sozinho quando a Marina fecha o atendimento na agenda.</p>
+        <div class="previa">Nas primeiras 24 h, não molhe os fios, evite vapor e sauna e não use rímel. Dúvida? Responda aqui.</div>
+      </div>
+    </li>
+    <li class="passo" data-passo="4">
+      <div class="passo__trilho"><span class="passo__marca passo__marca--bronze"><svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 9.5l3.2 3.2L14 5.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+      <div class="passo__corpo">
+        <div class="passo__topo"><span class="caps passo__quando" data-texto="quando4">Dia 21 · qui, 26/11, 10h</span><span class="passo__estado">Agendado</span></div>
+        <h2 class="passo__titulo">Aviso da manutenção</h2>
+        <p class="passo__desc">Os fios começam a cair por volta da terceira semana. O aviso já chega com horários livres.</p>
+        <div class="previa" data-texto="msg4">Faz três semanas da sua extensão. A manutenção leva 1 h e custa R$ 130. A Marina tem sexta, 27/11, às 10h ou às 15h.</div>
+        <div class="resposta__botoes resposta__botoes--fixos" aria-hidden="true">
+          <span class="resposta__btn" data-texto="botao4">Marcar sexta, 10h</span>
+          <span class="resposta__btn">Ver outros horários</span>
+        </div>
+      </div>
+    </li>
+  </ol>
+
+  <aside class="lateral">
+    <div class="agenda">
+      <div class="agenda__topo"><h2>Agenda da Marina</h2><span>qui, 5/11</span></div>
+      <ul class="agenda__lista">
+        <li><span class="agenda__hora">9h</span><span>Lash lifting · Ana R.</span></li>
+        <li><span class="agenda__hora">11h30</span><span>Manutenção · Beatriz M.</span></li>
+        <li class="agenda__voce" id="agenda-voce"><span class="agenda__hora">14h30</span><span id="agenda-status">Extensão fio a fio · você · marcada</span></li>
+        <li><span class="agenda__hora">17h</span><span class="it agenda__livre">livre</span></li>
+      </ul>
+    </div>
+    <div class="amanha">
+      <span class="caps caps--lapis">Confirmações de amanhã</span>
+      <div class="amanha__numeros">
+        <div><b id="n-conf">8</b><span>confirmadas</span></div>
+        <div><b id="n-rem">1</b><span>remarcou</span></div>
+        <div><b id="n-sem">2</b><span>sem resposta</span></div>
+      </div>
+      <span class="amanha__nota">Números da simulação.</span>
+    </div>
+    <p class="fecho">A recepção não digitou nenhuma dessas mensagens.</p>
+  </aside>
+</main>
+
+<script src="../assets/demo-bar.js"></script>
+<script src="../assets/bastidores.js"></script>
+</body>
+</html>
