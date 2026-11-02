@@ -81,6 +81,12 @@ ul, ol { list-style: none; }
   }
 }
 
+@media (max-width: 480px) {
+  /* Com a borda e o respiro da seta, o espaço entre links cai de 20 para 16 px para os quatro caberem em 390. */
+  .demo-bar__links { gap: 16px; }
+  .demo-bar__voltar { padding-left: 16px; border-left: 1px solid rgba(244, 246, 252, 0.15); }
+}
+
 /* ---------- Logo (tipográfico: o hífen é o bloco amarelo do meio-fio) ---------- */
 
 .logo {
