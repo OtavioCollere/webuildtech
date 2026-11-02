@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex">
+  <title>Agendar pelo WhatsApp · Meio-Fio · Conceito WeBuild</title>
+  <meta name="description" content="Demonstração: conversa simulada no estilo do WhatsApp para agendar horário na Meio-Fio.">
+  <meta name="theme-color" content="#0B0B0C">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Geist+Mono:wght@400&family=Sofia+Sans+Extra+Condensed:wght@800;900&display=swap">
+  <link rel="stylesheet" href="../base.css">
+  <link rel="stylesheet" href="whatsapp.css">
+</head>
+<body class="pagina-zap">
+
+<nav class="demo-bar" aria-label="Demonstração WeBuild">
+  <span class="demo-bar__marca">Conceito WeBuild</span>
+  <div class="demo-bar__links">
+    <a href="../">Landing</a>
+    <a href="../totem/">Totem</a>
+    <a href="./" aria-current="page">WhatsApp</a>
+    <a href="../bastidores/">Bastidores</a>
+  </div>
+  <a class="demo-bar__voltar" href="../../../#portfolio" aria-label="Voltar ao portfólio da WeBuild">← <span class="demo-bar__voltar-texto">Portfólio</span></a>
+</nav>
+
+<main class="palco">
+  <div class="palco__lado palco__lado--esq">
+    <p class="rotulo">Demonstração · conversa simulada</p>
+    <h1 class="palco__titulo">Quatro toques e tá marcado.</h1>
+    <p class="palco__texto">Toque nas opções do celular. É assim que o cliente da Meio-Fio marca: o bot mostra só horário livre na agenda do barbeiro e confirma na hora.</p>
+  </div>
+
+  <div class="celular">
+    <div class="celular__status" aria-hidden="true">
+      <span>19:03</span>
+      <span class="celular__icones"><i class="celular__sinal"></i><i class="celular__bateria"><i></i></i></span>
+    </div>
+
+    <section class="chat" aria-label="Conversa simulada com a Meio-Fio Barbearia">
+      <header class="chat__topo">
+        <a class="chat__voltar" href="../" aria-label="Voltar para a landing da Meio-Fio">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E9EDEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+        </a>
+        <span class="chat__avatar" aria-hidden="true"><i></i></span>
+        <span class="chat__quem">
+          <span class="chat__nome">Meio-Fio Barbearia</span>
+          <span class="chat__estado" id="chat-estado">online</span>
+        </span>
+        <svg class="chat__menu" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E9EDEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+      </header>
+      <p class="chat__faixa">Demonstração · conversa simulada</p>
+      <div class="chat__conversa" id="conversa">
+        <div class="chat__fluxo" id="fluxo" role="log" aria-live="polite">
+          <span class="chat__data">Hoje</span>
+        </div>
+      </div>
+      <div class="chat__barra" aria-hidden="true">
+        <span class="chat__campo">Toque numa opção acima</span>
+        <span class="chat__mic">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0B141A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><path d="M12 19v3"/></svg>
+        </span>
+      </div>
+    </section>
+  </div>
+
+  <div class="palco__lado palco__lado--dir">
+    <span class="palco__rotulo">Depois da confirmação</span>
+    <ul class="palco__lista">
+      <li><strong>Véspera, 18h</strong><span>Lembrete com botão pra remarcar</span></li>
+      <li><strong>No dia</strong><span>Aviso quando faltar um cliente</span></li>
+      <li><strong>20 dias depois</strong><span>“Bora cortar de novo?” com link</span></li>
+    </ul>
+    <a class="palco__link" href="../bastidores/">Ver os bastidores →</a>
+  </div>
+</main>
+
+<script src="whatsapp.js"></script>
+</body>
+</html>
