@@ -74,7 +74,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .demo-bar__back { justify-self: end; white-space: nowrap; }
 
 @media (max-width: 760px) {
-  .demo-bar { display: flex; padding: 0; }
+  .demo-bar { display: flex; padding: 0; column-gap: 0; }
   .demo-bar__brand { display: none; }
   .demo-bar__links {
     flex: 1 1 auto; min-width: 0; justify-content: flex-start;
@@ -86,6 +86,13 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
     height: 100%; border-left: 1px solid rgba(244, 246, 252, 0.15);
   }
   .demo-bar__back-text { display: none; }
+}
+@media (max-width: 480px) {
+  .demo-bar__sep { display: none; }
+  .demo-bar__links { justify-content: space-between; gap: 8px; padding: 0 12px; overflow-x: visible; }
+}
+@media (max-width: 374px) {
+  .demo-bar { letter-spacing: 0.1em; }
 }
 
 /* ---------- Marca ---------- */
