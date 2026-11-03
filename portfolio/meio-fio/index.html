@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Meio-Fio Barbearia · Conceito WeBuild</title>
+  <meta name="description" content="Caso conceito da WeBuild: landing de barbearia com agendamento pelo WhatsApp, totem de check-in e automação.">
+  <meta name="theme-color" content="#0B0B0C">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Geist+Mono:wght@400&family=Sofia+Sans+Extra+Condensed:wght@800;900&display=swap">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="demo-bar" aria-label="Demonstração WeBuild">
+  <span class="demo-bar__marca">Conceito WeBuild</span>
+  <div class="demo-bar__links">
+    <a href="./" aria-current="page">Landing</a>
+    <a href="totem/">Totem</a>
+    <a href="whatsapp/">WhatsApp</a>
+    <a href="bastidores/">Bastidores</a>
+  </div>
+  <a class="demo-bar__voltar" href="../../#portfolio" aria-label="Voltar ao portfólio da WeBuild">← <span class="demo-bar__voltar-texto">Portfólio</span></a>
+</nav>
+
+<header class="topo">
+  <div class="topo__marca">
+    <a class="logo" href="./" aria-label="Meio-Fio Barbearia"><span>Meio</span><i class="logo__bloco"></i><span>Fio</span></a>
+    <span class="topo__tag">Barbearia</span>
+  </div>
+  <nav class="topo__nav" aria-label="Seções">
+    <a href="#servicos">Serviços</a>
+    <a href="#barbeiros">Barbeiros</a>
+    <a href="#endereco">Endereço</a>
+    <a class="topo__agendar" href="whatsapp/">Agendar</a>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero" aria-labelledby="hero-titulo">
+    <img class="hero__foto" src="assets/hero.jpg" alt="Cliente de costas na cadeira do barbeiro, com degradê e desenho na navalha na nuca, sob uma luz forte" width="880" height="1168">
+    <div class="hero__degrade" aria-hidden="true"></div>
+    <div class="hero__conteudo">
+      <p class="rotulo">Barbearia · Rebouças · Curitiba</p>
+      <h1 id="hero-titulo" class="hero__titulo">Degradê<br>sem chá de<br>cadeira.</h1>
+      <p class="hero__sub">Marque pelo WhatsApp ou chegue sem horário. O totem da porta te põe na fila e o WhatsApp avisa quando faltar um cliente pra sua vez.</p>
+      <div class="hero__ctas">
+        <a class="btn btn--amarelo" href="whatsapp/">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+          Agendar pelo WhatsApp
+        </a>
+        <a class="link-servicos" href="#servicos">
+          Ver serviços e preços
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+        </a>
+      </div>
+    </div>
+    <a class="selo-fila" href="totem/">
+      <span class="ponto-vivo" aria-hidden="true"></span>
+      Fila agora · 2 na frente · uns 20 min
+    </a>
+  </section>
+
+  <div class="faixa" aria-hidden="true">
+    <div class="faixa__trilho">
+      <ul class="faixa__lista">
+        <li>Corte</li><li>Degradê</li><li>Navalhado</li><li>Barba</li><li>Pigmentação</li><li>Desenho na navalha</li>
+      </ul>
+      <ul class="faixa__lista">
+        <li>Corte</li><li>Degradê</li><li>Navalhado</li><li>Barba</li><li>Pigmentação</li><li>Desenho na navalha</li>
+      </ul>
+    </div>
+  </div>
+
+  <section class="secao servicos" id="servicos" aria-labelledby="servicos-titulo">
+    <div class="secao__cabeca">
+      <div class="secao__titulos">
+        <p class="rotulo">Serviços e preços</p>
+        <h2 id="servicos-titulo" class="titulo-secao">Tabela da casa.</h2>
+      </div>
+      <p class="secao__nota">Paga no fim, no Pix, débito ou crédito.</p>
+    </div>
+    <ul class="servicos__lista">
+      <li class="servico">
+        <span class="servico__nome">Corte degradê</span>
+        <span class="servico__det">
+          <span class="servico__desc"><span class="so-desktop">Máquina, tesoura e acabamento na navalha</span><span class="so-celular">Máquina, tesoura e navalha</span></span>
+          <span class="servico__tempo">45 min</span>
+        </span>
+        <span class="servico__preco">R$ 55</span>
+        <a class="servico__acao" href="whatsapp/?servico=degrade">Agendar →</a>
+      </li>
+      <li class="servico">
+        <span class="servico__nome">Corte social</span>
+        <span class="servico__det">
+          <span class="servico__desc">Tesoura, sem degradê</span>
+          <span class="servico__tempo">40 min</span>
+        </span>
+        <span class="servico__preco">R$ 50</span>
+        <a class="servico__acao" href="whatsapp/?servico=social">Agendar →</a>
+      </li>
+      <li class="servico">
+        <span class="servico__nome">Barba</span>
+        <span class="servico__det">
+          <span class="servico__desc">Toalha quente e navalha</span>
+          <span class="servico__tempo">30 min</span>
+        </span>
+        <span class="servico__preco">R$ 40</span>
+        <a class="servico__acao" href="whatsapp/?servico=barba">Agendar →</a>
+      </li>
+      <li class="servico">
+        <span class="servico__nome">Corte + barba</span>
+        <span class="servico__det">
+          <span class="servico__desc"><span class="so-desktop">Degradê ou social, mais a barba</span><span class="so-celular">Degradê ou social + barba</span></span>
+          <span class="servico__tempo">1h15</span>
+        </span>
+        <span class="servico__preco">R$ 85</span>
+        <a class="servico__acao" href="whatsapp/?servico=combo">Agendar →</a>
+      </li>
+      <li class="servico">
+        <span class="servico__nome">Pigmentação</span>
+        <span class="servico__det">
+          <span class="servico__desc">Barba ou cabelo</span>
+          <span class="servico__tempo">30 min</span>
+        </span>
+        <span class="servico__preco">R$ 35</span>
+        <a class="servico__acao" href="whatsapp/?servico=pigmentacao">Agendar →</a>
+      </li>
+      <li class="servico">
+        <span class="servico__nome">Desenho na navalha</span>
+        <span class="servico__det">
+          <span class="servico__desc"><span class="so-desktop">Risco ou freestyle, junto com o corte</span><span class="so-celular">Junto com o corte</span></span>
+          <span class="servico__tempo">+15 min</span>
+        </span>
+        <span class="servico__preco">+ R$ 15</span>
+        <a class="servico__acao" href="whatsapp/?servico=desenho">Agendar →</a>
+      </li>
+    </ul>
+  </section>
+
+  <section class="secao caminhos" aria-labelledby="caminhos-titulo">
+    <div class="secao__titulos">
+      <p class="rotulo">Como funciona</p>
+      <h2 id="caminhos-titulo" class="titulo-secao">Com horário <br class="so-celular">ou sem.</h2>
+    </div>
+    <div class="caminhos__colunas">
+      <article class="caminho caminho--com">
+        <h3 class="caminho__titulo"><span class="caminho__num">01</span>Tem horário</h3>
+        <p class="caminho__texto">Marque pelo WhatsApp: serviço, barbeiro, dia e hora. Na véspera chega o lembrete. Na porta, o check-in é só o seu telefone.</p>
+        <a class="btn btn--amarelo caminho__btn" href="whatsapp/">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+          Agendar pelo WhatsApp
+        </a>
+      </article>
+      <article class="caminho caminho--sem">
+        <h3 class="caminho__titulo"><span class="caminho__num">02</span>Sem horário</h3>
+        <p class="caminho__texto">Faça o check-in no totem da porta e escolha o barbeiro vendo quanto cada um vai demorar. Pode ir tomar um café. Quando faltar um cliente, o WhatsApp te chama.</p>
+        <a class="btn btn--contorno caminho__btn" href="totem/">
+          Ver o check-in do totem
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </article>
+    </div>
+  </section>
+
+  <section class="secao barbeiros" id="barbeiros" aria-labelledby="barbeiros-titulo">
+    <div class="secao__cabeca">
+      <div class="secao__titulos">
+        <p class="rotulo">Barbeiros</p>
+        <h2 id="barbeiros-titulo" class="titulo-secao">Quem tá na <br class="so-celular">cadeira.</h2>
+      </div>
+      <p class="secao__nota">Escolha pelo estilo. Se tanto faz, o primeiro livre te atende.</p>
+    </div>
+    <ul class="barbeiros__grade">
+      <li class="barbeiro">
+        <img class="barbeiro__foto" src="assets/teco.jpg" alt="Teco, de costas, passando a máquina no próprio cabelo diante do espelho" width="880" height="1168" loading="lazy">
+        <div class="barbeiro__info">
+          <h3 class="barbeiro__nome">Teco</h3>
+          <p class="barbeiro__esp">Degradê e navalhado</p>
+        </div>
+        <a class="barbeiro__acao" href="whatsapp/?barbeiro=teco">Agendar com Teco →</a>
+      </li>
+      <li class="barbeiro">
+        <img class="barbeiro__foto" src="assets/biel.jpg" alt="Mãos do Biel segurando a navalha sobre uma toalha quente, com vapor" width="880" height="1168" loading="lazy">
+        <div class="barbeiro__info">
+          <h3 class="barbeiro__nome">Biel</h3>
+          <p class="barbeiro__esp">Barba e pigmentação</p>
+        </div>
+        <a class="barbeiro__acao" href="whatsapp/?barbeiro=biel">Agendar com Biel →</a>
+      </li>
+      <li class="barbeiro">
+        <img class="barbeiro__foto" src="assets/duda.jpg" alt="Duda, de costas, com a máquina na mão ao lado da cadeira de barbeiro" width="880" height="1168" loading="lazy">
+        <div class="barbeiro__info">
+          <h3 class="barbeiro__nome">Duda</h3>
+          <p class="barbeiro__esp">Corte social e desenho na navalha</p>
+        </div>
+        <a class="barbeiro__acao" href="whatsapp/?barbeiro=duda">Agendar com Duda →</a>
+      </li>
+    </ul>
+  </section>
+
+  <section class="secao endereco" id="endereco" aria-labelledby="endereco-titulo">
+    <div class="endereco__texto">
+      <div class="secao__titulos">
+        <p class="rotulo">Endereço e horário</p>
+        <h2 id="endereco-titulo" class="titulo-secao">Encosta no<br>meio-fio.</h2>
+      </div>
+      <div class="mapa mapa--celular" role="img" aria-label="Mapa ilustrado: a Meio-Fio fica na Rua Trilho Velho, 410, perto da linha do trem">
+        <div class="mapa__plano">
+          <svg width="350" height="240" viewBox="0 0 350 240" fill="none" aria-hidden="true">
+            <path d="M-10 52 L360 24" stroke="#2C2C2D" stroke-width="10"/>
+            <path d="M-10 150 L360 136" stroke="#2C2C2D" stroke-width="14"/>
+            <path d="M68 -10 L96 250" stroke="#2C2C2D" stroke-width="8"/>
+            <path d="M210 -10 L228 250" stroke="#2C2C2D" stroke-width="10"/>
+            <path d="M318 -10 L304 250" stroke="#2C2C2D" stroke-width="7"/>
+            <path d="M-10 100 L360 240" stroke="#3A3A3B" stroke-width="2" stroke-dasharray="9 7"/>
+            <rect x="220" y="130" width="32" height="9" fill="#FFE600"/>
+          </svg>
+          <div class="mapa__rotulo mapa__rotulo--celular">
+            <span class="mapa__nome">Meio-Fio</span>
+            <span class="mapa__rua">R. Trilho Velho, 410</span>
+          </div>
+        </div>
+      </div>
+      <dl class="dados">
+        <div class="dados__linha">
+          <dt>Endereço</dt>
+          <dd><span class="so-desktop">Rua Trilho Velho, 410<br>Rebouças · Curitiba/PR</span><span class="so-celular">Rua Trilho Velho, 410 · Rebouças · Curitiba/PR</span></dd>
+        </div>
+        <div class="dados__linha">
+          <dt>Horário</dt>
+          <dd><span class="so-desktop">Ter a sex, 10h às 21h<br>Sáb, 9h às 19h · Dom e seg, fechado</span><span class="so-celular">Ter a sex, 10h às 21h · Sáb, 9h às 19h<br>Dom e seg, fechado</span></dd>
+        </div>
+        <div class="dados__linha">
+          <dt>WhatsApp</dt>
+          <dd>+55 41 90000-0002</dd>
+        </div>
+      </dl>
+    </div>
+    <div class="mapa mapa--desktop" role="img" aria-label="Mapa ilustrado: a Meio-Fio fica na Rua Trilho Velho, 410, perto da linha do trem">
+      <div class="mapa__plano">
+        <svg width="752" height="520" viewBox="0 0 752 520" fill="none" aria-hidden="true">
+          <path d="M-20 120 L780 60" stroke="#2C2C2D" stroke-width="18"/>
+          <path d="M-20 330 L780 300" stroke="#2C2C2D" stroke-width="26"/>
+          <path d="M150 -20 L210 540" stroke="#2C2C2D" stroke-width="14"/>
+          <path d="M430 -20 L470 540" stroke="#2C2C2D" stroke-width="18"/>
+          <path d="M640 -20 L610 540" stroke="#2C2C2D" stroke-width="12"/>
+          <path d="M-20 470 L780 420" stroke="#2C2C2D" stroke-width="12"/>
+          <path d="M-20 220 L780 520" stroke="#3A3A3B" stroke-width="3" stroke-dasharray="14 10"/>
+          <rect x="452" y="282" width="56" height="14" fill="#FFE600"/>
+        </svg>
+        <div class="mapa__rotulo">
+          <span class="mapa__nome">Meio-Fio</span>
+          <span class="mapa__rua">Rua Trilho Velho, 410</span>
+        </div>
+      </div>
+      <span class="mapa__legenda">- - - Linha do trem · Rebouças</span>
+    </div>
+  </section>
+
+  <section class="cta-final" aria-labelledby="cta-titulo">
+    <img class="cta-final__foto" src="assets/fachada.jpg" alt="" width="1344" height="752" loading="lazy">
+    <div class="cta-final__degrade" aria-hidden="true"></div>
+    <h2 id="cta-titulo" class="cta-final__titulo">Bora <br class="so-celular">cortar?</h2>
+    <div class="cta-final__linha">
+      <a class="btn btn--amarelo" href="whatsapp/">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+        Agendar pelo WhatsApp
+      </a>
+      <p class="cta-final__texto">No WhatsApp são quatro toques: serviço, barbeiro, dia e hora.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="rodape">
+  <div class="rodape__topo">
+    <a class="logo logo--rodape" href="./" aria-label="Meio-Fio Barbearia"><span>Meio</span><i class="logo__bloco"></i><span>Fio</span></a>
+    <div class="rodape__cols">
+      <div class="rodape__col">
+        <span class="rodape__rotulo">Endereço</span>
+        <span class="rodape__valor">Rua Trilho Velho, 410<br>Rebouças · Curitiba/PR</span>
+      </div>
+      <div class="rodape__col">
+        <span class="rodape__rotulo">Horário</span>
+        <span class="rodape__valor">Ter a sex, 10h às 21h<br>Sáb, 9h às 19h</span>
+      </div>
+      <div class="rodape__col">
+        <span class="rodape__rotulo">WhatsApp</span>
+        <span class="rodape__valor">+55 41 90000-0002</span>
+      </div>
+    </div>
+    <p class="rodape__celular">Rua Trilho Velho, 410 · Rebouças · Curitiba/PR<br>+55 41 90000-0002</p>
+  </div>
+  <div class="rodape__base">
+    <p>Meio-Fio é uma marca fictícia, criada pela WeBuild para demonstrar landing, totem, WhatsApp e automação.</p>
+    <p class="rodape__ano">Conceito · 2026</p>
+  </div>
+</footer>
+
+</body>
+</html>

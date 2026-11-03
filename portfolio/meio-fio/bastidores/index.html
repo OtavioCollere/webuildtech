@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Bastidores · Meio-Fio · Conceito WeBuild</title>
+  <meta name="description" content="Demonstração do painel de automação da Meio-Fio: o que roda sozinho depois que o horário é marcado.">
+  <meta name="theme-color" content="#0B0B0C">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Geist+Mono:wght@400&family=Sofia+Sans+Extra+Condensed:wght@800;900&display=swap">
+  <link rel="stylesheet" href="../base.css">
+  <link rel="stylesheet" href="bastidores.css">
+</head>
+<body>
+
+<nav class="demo-bar" aria-label="Demonstração WeBuild">
+  <span class="demo-bar__marca">Conceito WeBuild</span>
+  <div class="demo-bar__links">
+    <a href="../">Landing</a>
+    <a href="../totem/">Totem</a>
+    <a href="../whatsapp/">WhatsApp</a>
+    <a href="./" aria-current="page">Bastidores</a>
+  </div>
+  <a class="demo-bar__voltar" href="../../../#portfolio" aria-label="Voltar ao portfólio da WeBuild">← <span class="demo-bar__voltar-texto">Portfólio</span></a>
+</nav>
+
+<header class="topo">
+  <div class="topo__marca">
+    <a class="logo" href="../" aria-label="Meio-Fio Barbearia"><span>Meio</span><i class="logo__bloco"></i><span>Fio</span></a>
+    <span class="topo__tag">Painel da casa</span>
+  </div>
+  <span class="topo__aviso"><span class="so-desktop">Simulação · nenhuma mensagem sai de verdade</span><span class="so-celular">Painel · simulação</span></span>
+</header>
+
+<main>
+  <section class="cabeca" aria-labelledby="titulo">
+    <div class="cabeca__textos">
+      <p class="rotulo">Bastidores</p>
+      <h1 id="titulo" class="cabeca__titulo">O que roda <br class="so-celular">sozinho.</h1>
+      <p class="cabeca__sub">Depois que o horário é marcado, quatro mensagens saem no tempo certo. Rode passo a passo<span class="so-desktop"> pra ver cada uma</span>.</p>
+    </div>
+    <div class="controles">
+      <button class="controle controle--reset" type="button" id="recomecar" aria-label="Recomeçar">
+        <span class="so-desktop">Recomeçar</span>
+        <svg class="so-celular" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>
+      </button>
+      <button class="controle controle--rodar" type="button" id="rodar">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg>
+        <span id="rodar-texto">Rodar próximo passo</span>
+      </button>
+    </div>
+  </section>
+
+  <div class="agendamento">
+    <span class="agendamento__rotulo">Agendamento<span class="so-celular"> · via WhatsApp</span></span>
+    <span class="agendamento__texto">Lucas M. · Corte degradê com o Teco<span class="so-desktop"> · </span><br class="so-celular">quarta, 15h30 · R$ 55</span>
+    <span class="agendamento__via">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+      via WhatsApp
+    </span>
+  </div>
+
+  <ol class="linha" id="linha" aria-live="polite">
+    <li class="passo" data-passo="0">
+      <div class="passo__quando"><span class="passo__num">01</span><span class="passo__rotulo">Agora</span></div>
+      <div class="passo__textos">
+        <h2 class="passo__titulo">Horário confirmado</h2>
+        <p class="passo__desc">A agenda do Teco recebe o horário e a confirmação sai na hora.</p>
+      </div>
+      <div class="passo__bolha">
+        <p class="bolha__texto">Fechado, Lucas. Corte degradê com o Teco, quarta às 15h30. Rua Trilho Velho, 410.</p>
+        <span class="bolha__hora">seg 19:04</span>
+      </div>
+      <div class="passo__status"></div>
+    </li>
+    <li class="passo" data-passo="1">
+      <div class="passo__quando"><span class="passo__num">02</span><span class="passo__rotulo">Véspera, 18h</span></div>
+      <div class="passo__textos">
+        <h2 class="passo__titulo">Lembrete</h2>
+        <p class="passo__desc">Se o cliente remarcar, o horário volta pra agenda do Teco.</p>
+      </div>
+      <div class="passo__bolha">
+        <p class="bolha__texto">Amanhã, 15h30, com o Teco. Confirma ou quer remarcar?</p>
+        <span class="bolha__hora">ter 18:00</span>
+        <div class="bolha__botoes"><span>Confirmo</span><span>Remarcar</span></div>
+      </div>
+      <div class="passo__status"></div>
+    </li>
+    <li class="passo" data-passo="2">
+      <div class="passo__quando"><span class="passo__num">03</span><span class="passo__rotulo">No dia</span></div>
+      <div class="passo__textos">
+        <h2 class="passo__titulo">Sua vez está chegando</h2>
+        <p class="passo__desc">Quando falta um cliente na fila do Teco, o aviso sai sozinho.</p>
+      </div>
+      <div class="passo__bolha">
+        <p class="bolha__texto">Sua vez está chegando. O Teco termina o corte atual em uns 10 min.</p>
+        <span class="bolha__hora">qua 15:18</span>
+      </div>
+      <div class="passo__status"></div>
+    </li>
+    <li class="passo" data-passo="3">
+      <div class="passo__quando"><span class="passo__num">04</span><span class="passo__rotulo">20 dias depois</span></div>
+      <div class="passo__textos">
+        <h2 class="passo__titulo">Bora cortar de novo?</h2>
+        <p class="passo__desc">Um convite com link pra marcar, quando o degradê começa a crescer.</p>
+      </div>
+      <div class="passo__bolha">
+        <p class="bolha__texto">Bora cortar de novo? O Teco tem horário quinta às 18h.</p>
+        <span class="bolha__hora">seg 10:00</span>
+        <div class="bolha__botoes"><a href="../whatsapp/?barbeiro=teco">Agendar com o Teco</a></div>
+      </div>
+      <div class="passo__status"></div>
+    </li>
+  </ol>
+
+  <section class="fecho">
+    <p class="fecho__frase">Nenhum desses passos depende de alguém lembrar de mandar mensagem.</p>
+    <a class="btn btn--contorno fecho__btn" href="../whatsapp/">
+      Ver a conversa no WhatsApp
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+    </a>
+  </section>
+</main>
+
+<footer class="rodape">
+  <p>Meio-Fio é uma marca fictícia, criada pela WeBuild para demonstrar landing, totem, WhatsApp e automação.</p>
+  <p>+55 41 90000-0002</p>
+</footer>
+
+<script src="bastidores.js"></script>
+</body>
+</html>

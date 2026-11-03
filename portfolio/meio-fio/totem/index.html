@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Totem de check-in · Meio-Fio · Conceito WeBuild</title>
+  <meta name="description" content="Demonstração do totem de check-in da Meio-Fio: com horário ou entrando na fila ao vivo.">
+  <meta name="theme-color" content="#0B0B0C">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Geist+Mono:wght@400&family=Sofia+Sans+Extra+Condensed:wght@800;900&display=swap">
+  <link rel="stylesheet" href="../base.css">
+  <link rel="stylesheet" href="totem.css">
+</head>
+<body class="pagina-totem">
+
+<nav class="demo-bar" aria-label="Demonstração WeBuild">
+  <span class="demo-bar__marca">Conceito WeBuild</span>
+  <div class="demo-bar__links">
+    <a href="../">Landing</a>
+    <a href="./" aria-current="page">Totem</a>
+    <a href="../whatsapp/">WhatsApp</a>
+    <a href="../bastidores/">Bastidores</a>
+  </div>
+  <a class="demo-bar__voltar" href="../../../#portfolio" aria-label="Voltar ao portfólio da WeBuild">← <span class="demo-bar__voltar-texto">Portfólio</span></a>
+</nav>
+
+<main class="palco">
+  <div class="palco__lado palco__lado--esq">
+    <p class="rotulo">Demonstração · totem</p>
+    <h1 class="palco__titulo">O check-in da porta.</h1>
+    <p class="palco__texto">É o totem na entrada da Meio-Fio. Toque na tela e teste os dois caminhos: com horário marcado ou entrando na fila.</p>
+  </div>
+
+  <div class="moldura" id="moldura">
+    <div class="moldura__tela" id="moldura-tela">
+      <div class="totem" id="totem" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <div class="palco__lado palco__lado--dir">
+    <span class="palco__rotulo">O que a fila faz sozinha</span>
+    <ul class="palco__lista">
+      <li><strong>Cada barbeiro</strong><span>mostra a espera dele na hora</span></li>
+      <li><strong>Quem sai da cadeira</strong><span>faz a fila andar na tela</span></li>
+      <li><strong>Falta um cliente</strong><span>e o WhatsApp avisa quem saiu pra um café</span></li>
+    </ul>
+    <a class="palco__link" href="../bastidores/">Ver os bastidores →</a>
+  </div>
+</main>
+
+<script src="totem.js"></script>
+</body>
+</html>

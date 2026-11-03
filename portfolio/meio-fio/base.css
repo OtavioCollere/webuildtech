@@ -1,0 +1,140 @@
+/* Meio-Fio Barbearia — base compartilhada (landing, totem, whatsapp, bastidores)
+   Valores tirados das pranchas do Paper ("WeBuild — Portfólio" › Barbearia). */
+
+:root {
+  --asfalto: #0B0B0C;
+  --asfalto-seco: #161617;
+  --junta: #2C2C2D;
+  --po: #A6A6A0;
+  --tinta: #F2F2EE;
+  --amarelo: #FFE600;
+
+  --display: "Sofia Sans Extra Condensed", "Arial Narrow", sans-serif;
+  --texto: "Archivo", system-ui, sans-serif;
+  --mono: "Geist Mono", ui-monospace, monospace;
+
+  --margem: 72px;
+  --barra: 40px;
+}
+
+@media (max-width: 900px) {
+  :root { --margem: 20px; }
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: var(--barra); }
+
+body {
+  background: var(--asfalto);
+  color: var(--tinta);
+  font-family: var(--texto);
+  font-size: 16px;
+  line-height: 1.5;
+  padding-top: var(--barra);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img, svg { display: block; }
+img { max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+ul, ol { list-style: none; }
+
+:focus-visible { outline: 2px solid var(--amarelo); outline-offset: 3px; }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+/* ---------- Barra de demonstração (é da WeBuild, não da marca) ---------- */
+
+.demo-bar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 40px; padding: 0 32px;
+  background: #05070F; color: #F4F6FC;
+  font-family: "Geist Mono", ui-monospace, monospace; font-size: 12px; line-height: 16px; font-weight: 400;
+  letter-spacing: 0.14em; text-transform: uppercase;
+}
+.demo-bar__marca { width: 220px; }
+.demo-bar__links { display: flex; align-items: center; gap: 28px; }
+.demo-bar__links a { color: rgba(244, 246, 252, 0.7); transition: color .15s; }
+.demo-bar__links a:hover { color: #F4F6FC; }
+.demo-bar__links a[aria-current="page"] { color: #7892FF; }
+.demo-bar__voltar { width: 220px; text-align: right; color: #F4F6FC; }
+
+@media (max-width: 900px) {
+  .demo-bar { padding: 0 16px; gap: 16px; }
+  .demo-bar__marca { display: none; }
+  .demo-bar__links {
+    gap: 20px; flex: 1; min-width: 0;
+    overflow-x: auto; scrollbar-width: none;
+  }
+  .demo-bar__links::-webkit-scrollbar { display: none; }
+  .demo-bar__links a { flex-shrink: 0; }
+  .demo-bar__voltar { width: auto; flex-shrink: 0; padding-left: 0; }
+  .demo-bar__voltar-texto {
+    position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Com a borda e o respiro da seta, o espaço entre links cai de 20 para 16 px para os quatro caberem em 390. */
+  .demo-bar__links { gap: 16px; }
+  .demo-bar__voltar { padding-left: 16px; border-left: 1px solid rgba(244, 246, 252, 0.15); }
+}
+
+/* Abaixo de 390 (375, 360) os links apertam o tracking e o gap para continuarem cabendo sem rolar. */
+@media (max-width: 389px) {
+  .demo-bar__links { gap: 14px; }
+  .demo-bar__links a { letter-spacing: 0.1em; }
+}
+@media (max-width: 374px) {
+  .demo-bar__links { gap: 10px; }
+}
+
+/* ---------- Logo (tipográfico: o hífen é o bloco amarelo do meio-fio) ---------- */
+
+.logo {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-family: var(--display); font-weight: 900; font-size: 40px; line-height: 36px;
+  letter-spacing: 0.01em; text-transform: uppercase; color: var(--tinta);
+}
+.logo__bloco { display: block; width: 22px; height: 9px; background: var(--amarelo); flex-shrink: 0; }
+
+/* ---------- Peças comuns ---------- */
+
+.rotulo {
+  display: flex; align-items: center; gap: 14px;
+  font: 600 13px/16px var(--texto); letter-spacing: 0.14em; text-transform: uppercase; color: var(--tinta);
+}
+.rotulo::before { content: ""; width: 40px; height: 6px; background: var(--amarelo); flex-shrink: 0; }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 12px;
+  height: 60px; padding: 0 28px;
+  font: 600 17px/22px var(--texto);
+  transition: background-color .15s, color .15s;
+}
+.btn svg { flex-shrink: 0; }
+.btn--amarelo { background: var(--amarelo); color: var(--asfalto); }
+.btn--amarelo:hover { background: #FFF04D; }
+.btn--contorno { border: 1px solid var(--tinta); color: var(--tinta); }
+.btn--contorno:hover { background: rgba(242, 242, 238, 0.08); }
+
+.ponto-vivo {
+  width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0;
+  background: var(--amarelo); box-shadow: 0 0 0 5px rgba(255, 230, 0, 0.18);
+  animation: pulsa 1.8s ease-in-out infinite;
+}
+@keyframes pulsa {
+  0%, 100% { box-shadow: 0 0 0 5px rgba(255, 230, 0, 0.18); }
+  50% { box-shadow: 0 0 0 8px rgba(255, 230, 0, 0.06); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
