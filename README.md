@@ -9,7 +9,7 @@ seção Portfólio.
 ```
 index.html                     landing da WeBuild
 landing.css / landing.js       estilos e interações da landing
-assets/case-dms/               imagens do case antes/depois
+assets/case-dms/               prints do site da DMS (depois-capa.jpeg é a thumb do card; antes.jpeg ficou sem uso)
 assets/portfolio/<slug>.jpg    thumb de cada card do portfólio
 assets/time/<nome>.jpg         foto de cada sócio (quadrada, ver abaixo)
 portfolio/<slug>/              landing completa de cada protótipo
@@ -25,7 +25,7 @@ portfolio/<slug>/              landing completa de cada protótipo
 3. Gerar a thumb (1440×900, com o servidor local rodando):
 
    ```bash
-   cd /Users/otaviotakaki/Documents/development/pessoal/lps/webuild_site
+   # a partir da raiz do repo
    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --hide-scrollbars --window-size=1440,900 --virtual-time-budget=5000 --screenshot=/tmp/thumb.png http://localhost:8000/portfolio/nome-do-projeto/
    sips -s format jpeg -s formatOptions 82 /tmp/thumb.png --out assets/portfolio/nome-do-projeto.jpg
    ```
@@ -57,7 +57,7 @@ com imagem quebrada.
 ## Rodando local
 
 ```bash
-cd /Users/otaviotakaki/Documents/development/pessoal/lps/webuild_site
+# a partir da raiz do repo
 python3 -m http.server 8000
 ```
 
@@ -77,6 +77,9 @@ parece HTML quebrado, não cache.
 Qualquer hospedagem estática. Na Vercel: Framework Preset **Other**, Build,
 Output e Install vazios. Sem `vercel.json` com `cleanUrls` — em deploy estático
 a raiz passa a responder 404.
+
+O repo está ligado ao projeto Vercel `webuildtech`: cada merge na `main` publica
+o site no ar, e cada PR ganha uma prévia.
 
 ## Origem dos protótipos
 

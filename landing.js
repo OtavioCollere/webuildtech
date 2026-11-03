@@ -56,41 +56,6 @@
     window.addEventListener('scroll', onScrollPar, { passive: true });
   }
 
-  /* ---------- before/after toggle ---------- */
-  var toggle = document.getElementById('baToggle');
-  if (toggle) {
-    var thumb = document.getElementById('baThumb');
-    var tag = document.getElementById('caseTag');
-    var imgB = document.getElementById('imgBefore');
-    var imgA = document.getElementById('imgAfter');
-    var btns = [].slice.call(toggle.querySelectorAll('button'));
-
-    function placeThumb(btn) {
-      thumb.style.left = btn.offsetLeft + 'px';
-      thumb.style.width = btn.offsetWidth + 'px';
-    }
-    function setState(state) {
-      btns.forEach(function (b) {
-        var on = b.getAttribute('data-state') === state;
-        b.classList.toggle('on', on);
-        b.setAttribute('aria-pressed', on);
-      });
-      var onBtn = toggle.querySelector('button.on');
-      placeThumb(onBtn);
-      var isAfter = state === 'after';
-      imgA.classList.toggle('off', !isAfter);
-      imgB.classList.toggle('off', isAfter);
-      tag.textContent = isAfter ? 'Depois' : 'Antes';
-      tag.classList.toggle('before', !isAfter);
-    }
-    btns.forEach(function (b) {
-      b.addEventListener('click', function () { setState(b.getAttribute('data-state')); });
-    });
-    window.addEventListener('load', function () { placeThumb(toggle.querySelector('button.on')); });
-    window.addEventListener('resize', function () { placeThumb(toggle.querySelector('button.on')); });
-    setTimeout(function () { placeThumb(toggle.querySelector('button.on')); }, 300);
-  }
-
   /* ---------- smooth anchor offset ---------- */
   document.querySelectorAll('a[href^="#"]').forEach(function (a) {
     a.addEventListener('click', function (e) {
