@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Totem de check-in · Entrelinha · Conceito WeBuild</title>
+<meta name="description" content="Demonstração do totem de check-in da recepção do estúdio fictício Entrelinha.">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Jost:wght@300;400;500&family=Noto+Serif+Display:ital,wght@0,200;0,300;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/base.css">
+<link rel="stylesheet" href="../assets/palco.css">
+<link rel="stylesheet" href="../assets/totem.css">
+</head>
+<body class="pagina-palco">
+
+<nav class="demo-bar" aria-label="Navegação da demonstração WeBuild">
+  <span class="demo-bar__brand">Conceito WeBuild</span>
+  <div class="demo-bar__links">
+    <a href="../">Landing</a><span class="demo-bar__sep" aria-hidden="true">·</span>
+    <a href="./" aria-current="page">Totem</a><span class="demo-bar__sep" aria-hidden="true">·</span>
+    <a href="../whatsapp/">WhatsApp</a><span class="demo-bar__sep" aria-hidden="true">·</span>
+    <a href="../bastidores/">Bastidores</a>
+  </div>
+  <a class="demo-bar__back" href="../../../#portfolio" aria-label="Voltar para o portfólio da WeBuild"><span aria-hidden="true">←</span><span class="demo-bar__back-text">&nbsp;Portfólio</span></a>
+</nav>
+
+<main class="palco">
+  <aside class="palco__lado palco__lado--esq">
+    <a class="logo logo--palco" href="../" aria-label="Entrelinha, voltar para a landing"><span class="logo__palavra">entrelinha</span><span class="fio-duplo" aria-hidden="true"></span></a>
+    <span class="selo-demo"><i aria-hidden="true"></i>Demonstração · totem de check-in</span>
+    <h1 class="palco__titulo">Chegou? O check-in <span class="it">é no totem.</span></h1>
+    <p class="palco__texto">Toque na tela: telefone ou nome, confirma o procedimento e responde a ficha de alergias. A profissional recebe tudo antes de chamar.</p>
+    <button class="btn btn--contorno btn--pequeno" type="button" data-acao="recomecar">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.4-5.7M4 4v4.5h4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Recomeçar o check-in
+    </button>
+  </aside>
+
+  <div class="totem-moldura" id="moldura">
+    <div class="totem-corpo">
+      <div class="totem-tela" id="tela" aria-live="polite">
+        <header class="t-cabeca">
+          <span class="logo t-logo"><span class="logo__palavra">entrelinha</span><span class="fio-duplo" aria-hidden="true"></span></span>
+          <span class="t-hora">Qui, 5 de nov · 14h22</span>
+        </header>
+
+        <!-- 1. Início -->
+        <section class="t-passo ativo" data-tela="inicio" aria-label="Início do check-in">
+          <div class="t-conteudo">
+            <img class="t-foto" src="../assets/img/hero.jpg" width="880" height="1174" alt="">
+            <div class="t-titulo-bloco">
+              <p class="t-rotulo"><span class="t-folio">Nº 01</span><span class="t-caps">Recepção</span></p>
+              <h2 class="t-h1">Boa tarde. Faça o seu <span class="it">check-in.</span></h2>
+            </div>
+            <div class="t-opcoes">
+              <button class="t-opcao t-opcao--batom" type="button" data-ir="telefone">
+                <span><span class="t-opcao__titulo">Pelo telefone</span><span class="t-opcao__sub">O número do agendamento</span></span>
+                <svg viewBox="0 0 56 56" fill="none" aria-hidden="true"><path d="M12 28h32M32 16l12 12-12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <button class="t-opcao" type="button" data-ir="nome">
+                <span><span class="t-opcao__titulo">Pelo nome</span><span class="t-opcao__sub">Busque na lista de hoje</span></span>
+                <svg viewBox="0 0 56 56" fill="none" aria-hidden="true"><path d="M12 28h32M32 16l12 12-12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
+          </div>
+          <footer class="t-rodape t-rodape--texto">
+            <span>Sem horário marcado? Fale com a recepção.</span>
+            <span class="it t-lapis">Água, café e chá ao lado do espelho.</span>
+          </footer>
+        </section>
+
+        <!-- 2a. Telefone -->
+        <section class="t-passo" data-tela="telefone" aria-label="Check-in pelo telefone">
+          <div class="t-conteudo">
+            <div class="t-titulo-bloco">
+              <p class="t-rotulo"><span class="t-folio">Nº 02</span><span class="t-caps">Check-in pelo telefone</span></p>
+              <h2 class="t-h1 t-h1--m">Qual é o seu <span class="it">telefone?</span></h2>
+            </div>
+            <div class="t-campo">
+              <output class="t-campo__valor" id="telefone-valor">(41) 9 ____-____</output>
+              <span class="fio-duplo" aria-hidden="true"></span>
+              <span class="t-ajuda">Use o número que você deu no agendamento.</span>
+              <span class="t-ajuda t-ajuda--p">Demonstração: qualquer celular com 11 dígitos encontra um horário.</span>
+            </div>
+            <div class="t-teclado" role="group" aria-label="Teclado numérico">
+              <button type="button" data-tecla="1">1</button><button type="button" data-tecla="2">2</button><button type="button" data-tecla="3">3</button>
+              <button type="button" data-tecla="4">4</button><button type="button" data-tecla="5">5</button><button type="button" data-tecla="6">6</button>
+              <button type="button" data-tecla="7">7</button><button type="button" data-tecla="8">8</button><button type="button" data-tecla="9">9</button>
+              <button type="button" class="t-tecla-texto" data-tecla="limpar">Limpar</button><button type="button" data-tecla="0">0</button>
+              <button type="button" class="t-tecla-texto" data-tecla="apagar" aria-label="Apagar"><svg viewBox="0 0 44 32" fill="none" aria-hidden="true"><path d="M14 2h26a2 2 0 0 1 2 2v24a2 2 0 0 1-2 2H14L2 16Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M21 10l12 12M33 10L21 22" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+            </div>
+            <button class="t-botao" type="button" id="buscar" disabled>Buscar meu horário</button>
+          </div>
+          <footer class="t-rodape">
+            <button class="t-voltar" type="button" data-ir="inicio"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M26 16H7M15 8l-8 8 8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Voltar</button>
+            <span class="t-caps t-lapis">Passo 1 de 3</span>
+          </footer>
+        </section>
+
+        <!-- 2b. Nome -->
+        <section class="t-passo" data-tela="nome" aria-label="Check-in pelo nome">
+          <div class="t-conteudo">
+            <div class="t-titulo-bloco">
+              <p class="t-rotulo"><span class="t-folio">Nº 02</span><span class="t-caps">Check-in pelo nome</span></p>
+              <h2 class="t-h1 t-h1--m">Encontre o seu <span class="it">nome.</span></h2>
+            </div>
+            <div class="t-lista" id="lista-hoje"></div>
+          </div>
+          <footer class="t-rodape">
+            <button class="t-voltar" type="button" data-ir="inicio"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M26 16H7M15 8l-8 8 8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Voltar</button>
+            <span class="t-caps t-lapis">Passo 1 de 3</span>
+          </footer>
+        </section>
+
+        <!-- 3. Confirmação -->
+        <section class="t-passo" data-tela="confirmacao" aria-label="Confirme o procedimento">
+          <div class="t-conteudo">
+            <div class="t-titulo-bloco">
+              <p class="t-rotulo"><span class="t-folio">Nº 03</span><span class="t-caps">Confirme o procedimento</span></p>
+              <h2 class="t-h1 t-h1--m">Achamos o seu <span class="it">horário.</span></h2>
+            </div>
+            <div class="t-cartao">
+              <div class="t-cartao__topo">
+                <span class="t-caps t-batom" data-campo="quando">Hoje · 14h30</span>
+                <span class="t-cartao__proc" data-campo="proc">Extensão de cílios fio a fio</span>
+              </div>
+              <dl class="t-dados">
+                <div><dt>Profissional</dt><dd data-campo="prof-completo">Marina Okada</dd></div>
+                <div><dt>Duração</dt><dd data-campo="tempo">2 h</dd></div>
+                <div><dt>Valor</dt><dd data-campo="preco">R$ 230</dd></div>
+              </dl>
+            </div>
+            <div class="t-acoes">
+              <button class="t-botao" type="button" data-ir="ficha">É isso</button>
+              <button class="t-botao t-botao--contorno" type="button" data-ir="recepcao">Não é isso, chamar a recepção</button>
+            </div>
+          </div>
+          <footer class="t-rodape">
+            <button class="t-voltar" type="button" data-ir="voltar-busca"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M26 16H7M15 8l-8 8 8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Voltar</button>
+            <span class="t-caps t-lapis">Passo 2 de 3</span>
+          </footer>
+        </section>
+
+        <!-- 3b. Chamou a recepção -->
+        <section class="t-passo" data-tela="recepcao" aria-label="Recepção chamada">
+          <div class="t-conteudo t-conteudo--centro">
+            <p class="t-rotulo"><span class="t-caps t-batom">Recepção avisada</span></p>
+            <h2 class="t-h1">Já vem alguém <span class="it">te ajudar.</span></h2>
+            <p class="t-texto-g">Pode aguardar aqui mesmo. Água, café e chá ao lado do espelho.</p>
+          </div>
+          <footer class="t-rodape t-rodape--progresso">
+            <span class="t-progresso" aria-hidden="true"><i></i></span>
+            <span class="t-lapis t-contagem">Esta tela volta ao início em <b data-contagem>8</b> s</span>
+          </footer>
+        </section>
+
+        <!-- 4. Ficha rápida -->
+        <section class="t-passo" data-tela="ficha" aria-label="Ficha rápida">
+          <div class="t-conteudo t-conteudo--ficha">
+            <div class="t-titulo-bloco">
+              <p class="t-rotulo"><span class="t-folio">Nº 04</span><span class="t-caps">Ficha rápida</span></p>
+              <h2 class="t-h1 t-h1--f">Antes de começar, <span class="it">uma ficha rápida.</span></h2>
+            </div>
+            <fieldset class="t-pergunta" data-pergunta="primeira">
+              <legend>É a sua primeira vez aqui?</legend>
+              <div class="t-chips">
+                <button type="button" class="t-chip" data-valor="sim" aria-pressed="false">Sim</button>
+                <button type="button" class="t-chip" data-valor="nao" aria-pressed="false">Não</button>
+              </div>
+            </fieldset>
+            <fieldset class="t-pergunta" data-pergunta="alergia" data-multipla>
+              <legend>Tem alergia a algum produto?</legend>
+              <div class="t-chips">
+                <button type="button" class="t-chip t-chip--l" data-valor="nenhuma" aria-pressed="false">Não tenho</button>
+                <button type="button" class="t-chip t-chip--l" data-valor="Cola de cílios" aria-pressed="false">Cola de cílios</button>
+                <button type="button" class="t-chip t-chip--l" data-valor="Henna" aria-pressed="false">Henna</button>
+                <button type="button" class="t-chip t-chip--l" data-valor="Látex" aria-pressed="false">Látex</button>
+                <button type="button" class="t-chip t-chip--l" data-valor="Outro" aria-pressed="false">Outro</button>
+              </div>
+            </fieldset>
+            <fieldset class="t-pergunta" data-pergunta="lente">
+              <legend><span>Usa lente de contato?</span><span class="t-caps t-lapis t-caps--p">Só para cílios</span></legend>
+              <div class="t-chips">
+                <button type="button" class="t-chip" data-valor="sim" aria-pressed="false">Sim, vou tirar</button>
+                <button type="button" class="t-chip" data-valor="nao" aria-pressed="false">Não</button>
+              </div>
+            </fieldset>
+            <div class="t-concluir">
+              <span class="it t-lapis t-nota">Suas respostas vão direto para a ficha da <span data-campo="prof">Marina</span>.</span>
+              <button class="t-botao" type="button" id="concluir" disabled>Concluir check-in</button>
+            </div>
+          </div>
+          <footer class="t-rodape">
+            <button class="t-voltar" type="button" data-ir="confirmacao"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M26 16H7M15 8l-8 8 8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Voltar</button>
+            <span class="t-caps t-lapis">Passo 3 de 3</span>
+          </footer>
+        </section>
+
+        <!-- 5. Pode sentar -->
+        <section class="t-passo" data-tela="pronto" aria-label="Check-in feito">
+          <div class="t-conteudo">
+            <div class="t-titulo-bloco t-titulo-bloco--pronto">
+              <p class="t-feito"><svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="1.5"/><path d="M12 20.5l5.5 5.5L28 15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="t-caps">Check-in feito</span></p>
+              <h2 class="t-h1 t-h1--xl">Pode <span class="it">sentar.</span></h2>
+              <p class="t-chama">A <span data-campo="prof">Marina</span> já te chama.</p>
+            </div>
+            <div class="t-resumo">
+              <div>
+                <span class="t-resumo__proc" data-campo="proc">Extensão de cílios fio a fio</span>
+                <span class="t-resumo__det">Com a <span data-campo="prof">Marina</span> · <span data-campo="tempo">2 h</span> · <span data-campo="preco">R$ 230</span></span>
+              </div>
+              <span class="t-resumo__hora" data-campo="hora">14h30</span>
+            </div>
+            <div class="t-avisos" id="avisos"></div>
+          </div>
+          <footer class="t-rodape t-rodape--progresso">
+            <span class="t-progresso" aria-hidden="true"><i></i></span>
+            <span class="t-lapis t-contagem">Esta tela volta ao início em <b data-contagem>10</b> s</span>
+          </footer>
+        </section>
+      </div>
+    </div>
+    <div class="totem-pe" aria-hidden="true"></div>
+  </div>
+
+  <aside class="palco__lado palco__lado--dir">
+    <span class="caps">O que muda na recepção</span>
+    <ol class="palco__lista">
+      <li><span class="palco__num">01</span>A cliente faz o próprio check-in, em três toques.</li>
+      <li><span class="palco__num">02</span>A ficha de alergias chega pronta para a profissional.</li>
+      <li><span class="palco__num">03</span>Quem não acha o horário chama a recepção pela tela.</li>
+    </ol>
+    <a class="link-batom" href="../bastidores/">Ver os bastidores →</a>
+  </aside>
+</main>
+
+<script src="../assets/demo-bar.js"></script>
+<script src="../assets/totem.js"></script>
+</body>
+</html>

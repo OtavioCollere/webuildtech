@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Entrelinha · Estúdio de sobrancelha, cílios e pele · Conceito WeBuild</title>
+<meta name="description" content="Entrelinha é um estúdio fictício de sobrancelha, cílios e pele, criado pela WeBuild para demonstrar landing, totem de check-in, WhatsApp e automação.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Jost:wght@300;400;500&family=Noto+Serif+Display:ital,wght@0,200;0,300;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/landing.css">
+</head>
+<body>
+
+<nav class="demo-bar" aria-label="Navegação da demonstração WeBuild">
+  <span class="demo-bar__brand">Conceito WeBuild</span>
+  <div class="demo-bar__links">
+    <a href="./" aria-current="page">Landing</a><span class="demo-bar__sep" aria-hidden="true">·</span>
+    <a href="totem/">Totem</a><span class="demo-bar__sep" aria-hidden="true">·</span>
+    <a href="whatsapp/">WhatsApp</a><span class="demo-bar__sep" aria-hidden="true">·</span>
+    <a href="bastidores/">Bastidores</a>
+  </div>
+  <a class="demo-bar__back" href="../../#portfolio" aria-label="Voltar para o portfólio da WeBuild"><span aria-hidden="true">←</span><span class="demo-bar__back-text">&nbsp;Portfólio</span></a>
+</nav>
+
+<header class="topo">
+  <a class="logo" href="#inicio" aria-label="Entrelinha, início">
+    <span class="logo__palavra">entrelinha</span>
+    <span class="fio-duplo" aria-hidden="true"></span>
+  </a>
+  <nav class="topo__nav" id="menu" aria-label="Seções">
+    <a href="#procedimentos">Procedimentos</a>
+    <a href="#antes-e-depois">Antes e depois</a>
+    <a href="#equipe">Equipe</a>
+    <a href="#endereco">Endereço</a>
+  </nav>
+  <div class="topo__acao">
+    <a class="btn btn--batom btn--topo" href="whatsapp/">Agendar</a>
+    <button class="topo__menu" type="button" aria-controls="menu" aria-expanded="false">
+      <span class="sr-only">Abrir menu</span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 8h16M4 16h16" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="inicio">
+    <div class="hero__texto">
+      <p class="rotulo"><span class="folio">Nº 01</span><span class="caps">Sobrancelha · Cílios · Pele<span class="so-desktop"> · Alto da Glória</span></span></p>
+      <h1 class="hero__titulo">Todo mundo nota.<br class="so-desktop"> Ninguém sabe <span class="it">dizer o quê.</span></h1>
+      <p class="hero__sub">Design de sobrancelha, cílios e limpeza de pele no Alto da Glória. O preço e o tempo de cada procedimento estão logo abaixo, e o horário você marca pelo WhatsApp.</p>
+      <div class="hero__acoes">
+        <div class="hero__botoes">
+          <a class="btn btn--batom" href="whatsapp/">
+            <svg width="20" height="20" viewBox="0 0 256 256" fill="none" aria-hidden="true"><path d="M45.4 177A96 96 0 1 1 79 210.6L45.8 220.1a8 8 0 0 1-9.9-9.9Z" stroke="currentColor" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Agendar pelo WhatsApp
+          </a>
+          <a class="link-sublinhado" href="#procedimentos">Ver procedimentos e preços ↓</a>
+        </div>
+        <p class="hero__micro">A confirmação chega na hora, e o lembrete, um dia antes.</p>
+      </div>
+    </div>
+    <figure class="hero__foto">
+      <img src="assets/img/hero.jpg" width="880" height="1174" alt="Close de uma sobrancelha laminada, com os fios penteados para cima, sobre o olho fechado">
+      <figcaption><span class="legenda">Brow lamination, 1 h.</span><span class="hero__ilustrativa">Imagem ilustrativa</span></figcaption>
+    </figure>
+  </section>
+
+  <section class="secao sumario" id="procedimentos" aria-labelledby="sumario-titulo">
+    <span class="fio-duplo secao__fio" aria-hidden="true"></span>
+    <div class="secao__cabeca">
+      <div class="secao__titulo-bloco">
+        <p class="rotulo"><span class="folio">Nº 02</span><span class="caps">Sumário</span></p>
+        <h2 class="titulo-secao" id="sumario-titulo">Tudo o que fazemos, com preço e tempo.</h2>
+      </div>
+      <p class="secao__nota">Pix, débito ou crédito. É a primeira vez? A ficha de alergias é feita no check-in, na recepção.</p>
+    </div>
+
+    <div class="tabela" role="table" aria-label="Procedimentos, tempo e preço">
+      <div class="tabela__cabeca" role="row">
+        <span role="columnheader">Nº</span>
+        <span role="columnheader">Procedimento</span>
+        <span role="columnheader">Tempo</span>
+        <span role="columnheader">Preço</span>
+        <span role="columnheader">Quando voltar</span>
+        <span role="columnheader"><span class="sr-only">Agendar</span></span>
+      </div>
+      <div class="tabela__linha" role="row">
+        <span class="tabela__num" role="cell">01</span>
+        <div class="tabela__nome" role="cell"><span class="tabela__proc">Design de sobrancelha</span><span class="tabela__desc">Mapeamento do rosto, pinça e linha</span></div>
+        <span class="tabela__tempo" role="cell">40 min</span>
+        <span class="tabela__preco" role="cell">R$ 65</span>
+        <span class="tabela__volta" role="cell"><span class="so-celular">Voltar </span>em 15 a 20 dias</span>
+        <a class="tabela__agendar link-batom" role="cell" href="whatsapp/?p=design">Agendar →</a>
+      </div>
+      <div class="tabela__linha" role="row">
+        <span class="tabela__num" role="cell">02</span>
+        <div class="tabela__nome" role="cell"><span class="tabela__proc">Design com henna</span><span class="tabela__desc">O design, mais henna para preencher as falhas</span></div>
+        <span class="tabela__tempo" role="cell">50 min</span>
+        <span class="tabela__preco" role="cell">R$ 85</span>
+        <span class="tabela__volta" role="cell"><span class="so-celular">Voltar </span>em 15 a 20 dias</span>
+        <a class="tabela__agendar link-batom" role="cell" href="whatsapp/?p=henna">Agendar →</a>
+      </div>
+      <div class="tabela__linha" role="row">
+        <span class="tabela__num" role="cell">03</span>
+        <div class="tabela__nome" role="cell"><span class="tabela__proc">Brow lamination</span><span class="tabela__desc">Alinha os fios para cima e deixa a sobrancelha mais cheia</span></div>
+        <span class="tabela__tempo" role="cell">1 h</span>
+        <span class="tabela__preco" role="cell">R$ 150</span>
+        <span class="tabela__volta" role="cell">dura de 6 a 8 semanas</span>
+        <a class="tabela__agendar link-batom" role="cell" href="whatsapp/?p=lamination">Agendar →</a>
+      </div>
+      <div class="tabela__linha" role="row">
+        <span class="tabela__num" role="cell">04</span>
+        <div class="tabela__nome" role="cell"><span class="tabela__proc">Lash lifting</span><span class="tabela__desc">Curva os seus próprios cílios, sem fio extra</span></div>
+        <span class="tabela__tempo" role="cell">1 h</span>
+        <span class="tabela__preco" role="cell">R$ 160</span>
+        <span class="tabela__volta" role="cell">dura de 6 a 8 semanas</span>
+        <a class="tabela__agendar link-batom" role="cell" href="whatsapp/?p=lifting">Agendar →</a>
+      </div>
+      <div class="tabela__linha" role="row">
+        <span class="tabela__num" role="cell">05</span>
+        <div class="tabela__nome" role="cell"><span class="tabela__proc">Extensão de cílios fio a fio</span><span class="tabela__desc">Um fio sintético em cada cílio natural</span></div>
+        <span class="tabela__tempo" role="cell">2 h</span>
+        <span class="tabela__preco" role="cell">R$ 230</span>
+        <span class="tabela__volta" role="cell">manutenção em 21 dias<span class="so-celular">,</span> <br class="so-desktop">R$ 130</span>
+        <a class="tabela__agendar link-batom" role="cell" href="whatsapp/?p=extensao">Agendar →</a>
+      </div>
+      <div class="tabela__linha" role="row">
+        <span class="tabela__num" role="cell">06</span>
+        <div class="tabela__nome" role="cell"><span class="tabela__proc">Limpeza de pele</span><span class="tabela__desc">Higienização, extração e máscara calmante</span></div>
+        <span class="tabela__tempo" role="cell">1h20</span>
+        <span class="tabela__preco" role="cell">R$ 190</span>
+        <span class="tabela__volta" role="cell">a cada 30 a 45 dias</span>
+        <a class="tabela__agendar link-batom" role="cell" href="whatsapp/?p=limpeza">Agendar →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="antes-depois" id="antes-e-depois" aria-labelledby="ad-titulo">
+    <div class="secao__cabeca">
+      <div class="secao__titulo-bloco">
+        <p class="rotulo"><span class="folio folio--rimel">Nº 03</span><span class="caps">Antes e depois</span></p>
+        <h2 class="titulo-secao" id="ad-titulo">Arraste a linha <span class="it">e compare.</span></h2>
+      </div>
+      <p class="secao__nota secao__nota--rimel">Imagens ilustrativas, geradas por IA para esta demonstração.</p>
+    </div>
+
+    <div class="comparadores" id="comparadores">
+      <figure class="comparador">
+        <div class="comparador__imagens" style="--pos: 50%">
+          <img class="comparador__depois" src="assets/img/sobrancelha-depois.jpg" width="800" height="600" alt="Depois: sobrancelha laminada, cheia e alinhada" loading="lazy">
+          <div class="comparador__antes"><img src="assets/img/sobrancelha-antes.jpg" width="800" height="600" alt="Antes: sobrancelha com falhas e fios desalinhados" loading="lazy"></div>
+          <span class="comparador__linha" aria-hidden="true"></span>
+          <span class="comparador__alca" aria-hidden="true"><svg width="8" height="12" viewBox="0 0 8 12" fill="none"><path d="M6.5 1L1.5 6L6.5 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><svg width="8" height="12" viewBox="0 0 8 12" fill="none"><path d="M1.5 1L6.5 6L1.5 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="selo selo--antes">Antes</span><span class="selo selo--depois">Depois</span>
+          <input class="comparador__controle" type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois da brow lamination">
+        </div>
+        <figcaption><span class="legenda legenda--g">Brow lamination</span><span>1 h · R$ 150</span></figcaption>
+      </figure>
+      <figure class="comparador">
+        <div class="comparador__imagens" style="--pos: 50%">
+          <img class="comparador__depois" src="assets/img/cilios-depois.jpg" width="800" height="600" alt="Depois: cílios com extensão fio a fio, mais cheios e curvados" loading="lazy">
+          <div class="comparador__antes"><img src="assets/img/cilios-antes.jpg" width="800" height="600" alt="Antes: cílios naturais, mais ralos" loading="lazy"></div>
+          <span class="comparador__linha" aria-hidden="true"></span>
+          <span class="comparador__alca" aria-hidden="true"><svg width="8" height="12" viewBox="0 0 8 12" fill="none"><path d="M6.5 1L1.5 6L6.5 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><svg width="8" height="12" viewBox="0 0 8 12" fill="none"><path d="M1.5 1L6.5 6L1.5 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="selo selo--antes">Antes</span><span class="selo selo--depois">Depois</span>
+          <input class="comparador__controle" type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois da extensão de cílios">
+        </div>
+        <figcaption><span class="legenda legenda--g">Extensão fio a fio</span><span>2 h · R$ 230</span></figcaption>
+      </figure>
+      <figure class="comparador">
+        <div class="comparador__imagens" style="--pos: 50%">
+          <img class="comparador__depois" src="assets/img/pele-depois.jpg" width="800" height="600" alt="Depois: pele da bochecha limpa e uniforme" loading="lazy">
+          <div class="comparador__antes"><img src="assets/img/pele-antes.jpg" width="800" height="600" alt="Antes: poros dilatados e alguns cravos na bochecha" loading="lazy"></div>
+          <span class="comparador__linha" aria-hidden="true"></span>
+          <span class="comparador__alca" aria-hidden="true"><svg width="8" height="12" viewBox="0 0 8 12" fill="none"><path d="M6.5 1L1.5 6L6.5 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><svg width="8" height="12" viewBox="0 0 8 12" fill="none"><path d="M1.5 1L6.5 6L1.5 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="selo selo--antes">Antes</span><span class="selo selo--depois">Depois</span>
+          <input class="comparador__controle" type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois da limpeza de pele">
+        </div>
+        <figcaption><span class="legenda legenda--g">Limpeza de pele</span><span>1h20 · R$ 190</span></figcaption>
+      </figure>
+    </div>
+    <div class="paginacao" aria-hidden="true">
+      <span class="paginacao__barras"><i class="ativo"></i><i></i><i></i></span>
+      <button class="paginacao__proximo" type="button" tabindex="-1">Cílios e pele →</button>
+    </div>
+  </section>
+
+  <section class="secao equipe" id="equipe" aria-labelledby="equipe-titulo">
+    <div class="secao__cabeca">
+      <div class="secao__titulo-bloco secao__titulo-bloco--largo">
+        <p class="rotulo"><span class="folio">Nº 04</span><span class="caps">Equipe</span></p>
+        <h2 class="titulo-secao" id="equipe-titulo">Quatro profissionais, cada uma no seu ofício.</h2>
+      </div>
+      <p class="secao__nota">No WhatsApp você escolhe com quem quer fazer, ou fica com quem tiver horário antes.</p>
+    </div>
+    <ul class="equipe__lista">
+      <li class="pessoa">
+        <img src="assets/img/equipe-livia.jpg" width="592" height="790" alt="Mãos de profissional segurando pinça e escovinha de sobrancelha" loading="lazy">
+        <div class="pessoa__nome"><span class="caps caps--lapis">Sobrancelha</span><h3>Lívia Prado</h3></div>
+        <p class="pessoa__frase">“Sobrancelha boa é a que ninguém percebe que foi feita.”</p>
+        <a class="link-batom" href="whatsapp/?pro=livia">Agendar com a Lívia →</a>
+      </li>
+      <li class="pessoa">
+        <img src="assets/img/equipe-marina.jpg" width="592" height="790" alt="Mãos de lash designer pegando um fio de cílio com a pinça" loading="lazy">
+        <div class="pessoa__nome"><span class="caps caps--lapis">Cílios</span><h3>Marina Okada</h3></div>
+        <p class="pessoa__frase">“Antes de colar o primeiro fio, pergunto como você usa maquiagem.”</p>
+        <a class="link-batom" href="whatsapp/?pro=marina">Agendar com a Marina →</a>
+      </li>
+      <li class="pessoa">
+        <img src="assets/img/equipe-joana.jpg" width="592" height="790" alt="Mãos preparando henna num pote de cerâmica, ao lado de um kit de lash lifting" loading="lazy">
+        <div class="pessoa__nome"><span class="caps caps--lapis">Cílios e sobrancelha</span><h3>Joana Reis</h3></div>
+        <p class="pessoa__frase">“Se você nunca fez, a gente começa pelo lifting.”</p>
+        <a class="link-batom" href="whatsapp/?pro=joana">Agendar com a Joana →</a>
+      </li>
+      <li class="pessoa">
+        <img src="assets/img/equipe-teresa.jpg" width="592" height="790" alt="Mãos de esteticista com pincel e máscara de argila rosa" loading="lazy">
+        <div class="pessoa__nome"><span class="caps caps--lapis">Pele</span><h3>Teresa Vidal</h3></div>
+        <p class="pessoa__frase">“Pele sensível pede menos produto e mais conversa.”</p>
+        <a class="link-batom" href="whatsapp/?pro=teresa">Agendar com a Teresa →</a>
+      </li>
+    </ul>
+  </section>
+
+  <section class="secao momentos" aria-labelledby="momentos-titulo">
+    <span class="fio-duplo secao__fio" aria-hidden="true"></span>
+    <div class="secao__titulo-bloco secao__titulo-bloco--momentos">
+      <p class="rotulo"><span class="folio">Nº 05</span><span class="caps">Do agendamento à manutenção</span></p>
+      <h2 class="titulo-secao" id="momentos-titulo">Você marca. O estúdio <span class="it">lembra do resto.</span></h2>
+    </div>
+    <ol class="momentos__lista">
+      <li class="momento">
+        <span class="momento__num">01</span>
+        <h3>Pelo WhatsApp</h3>
+        <p>Pergunte preço, tempo e cuidados e marque o horário: procedimento, profissional, dia e hora.</p>
+        <a class="link-batom" href="whatsapp/">Abrir a conversa →</a>
+      </li>
+      <li class="momento">
+        <span class="momento__num">02</span>
+        <h3>Na recepção</h3>
+        <p>Faça o check-in no totem com o seu telefone, confirme o procedimento e responda a ficha de alergias.</p>
+        <a class="link-batom" href="totem/">Ver o check-in →</a>
+      </li>
+      <li class="momento">
+        <span class="momento__num">03</span>
+        <h3>Depois</h3>
+        <p>Um dia antes, a confirmação com a opção de remarcar. Depois do procedimento, os cuidados por escrito. No dia certo, o aviso da manutenção.</p>
+        <a class="link-batom" href="bastidores/">Ver os bastidores →</a>
+      </li>
+    </ol>
+  </section>
+
+  <section class="secao duvidas" aria-labelledby="duvidas-titulo">
+    <div class="duvidas__cabeca">
+      <p class="rotulo"><span class="folio">Nº 06</span><span class="caps">Dúvidas</span></p>
+      <h2 class="titulo-secao" id="duvidas-titulo">Dúvidas de antes.</h2>
+      <a class="link-batom duvidas__mais" href="whatsapp/?d=duvida">Ficou outra dúvida? Pergunte no WhatsApp →</a>
+    </div>
+    <div class="duvidas__lista">
+      <details open>
+        <summary>Dói?</summary>
+        <p>A pinça incomoda um pouco. No lifting e na extensão você fica de olhos fechados e não sente dor.</p>
+      </details>
+      <details>
+        <summary>Tenho alergia. Posso fazer?</summary>
+        <p>Conte na ficha do check-in. Na primeira vez com cola ou henna, fazemos um teste de toque 48 h antes.</p>
+      </details>
+      <details>
+        <summary>Posso ir maquiada?</summary>
+        <p>Para cílios, venha sem rímel. Para limpeza de pele, sem maquiagem.</p>
+      </details>
+      <details>
+        <summary>E se eu precisar remarcar?</summary>
+        <p>Um dia antes chega a confirmação no WhatsApp, com o botão Remarcar.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="secao endereco" id="endereco" aria-labelledby="endereco-titulo">
+    <div class="endereco__texto">
+      <div class="endereco__topo">
+        <p class="rotulo"><span class="folio">Nº 07</span><span class="caps">Endereço</span></p>
+        <h2 class="titulo-secao" id="endereco-titulo">Rua das Camomilas, <span class="it">186.</span></h2>
+        <p class="endereco__bairro">Alto da Glória · Curitiba/PR</p>
+      </div>
+      <div class="endereco__dados">
+        <div>
+          <span class="caps caps--lapis caps--p">Horário</span>
+          <p>Ter a sex, 9h às 20h<br>Sáb, 9h às 16h<br>Dom e seg, fechado</p>
+        </div>
+        <div>
+          <span class="caps caps--lapis caps--p">WhatsApp</span>
+          <p>+55 41 90000-0003</p>
+        </div>
+      </div>
+    </div>
+    <div class="mapa" role="img" aria-label="Mapa ilustrado com a localização do estúdio">
+      <svg viewBox="0 0 600 480" fill="none" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <path d="M-20 120 L620 60" stroke="#1D1718" stroke-opacity="0.35"/>
+        <path d="M-20 300 L620 250" stroke="#1D1718" stroke-opacity="0.35"/>
+        <path d="M-20 420 L620 380" stroke="#1D1718" stroke-opacity="0.2"/>
+        <path d="M140 -20 L200 500" stroke="#1D1718" stroke-opacity="0.35"/>
+        <path d="M330 -20 L370 500" stroke="#1D1718" stroke-width="1.5"/>
+        <path d="M500 -20 L540 500" stroke="#1D1718" stroke-opacity="0.2"/>
+        <path d="M-20 200 C 120 180, 220 240, 340 210 S 520 140, 620 170" stroke="#1D1718" stroke-opacity="0.2" stroke-dasharray="4 6"/>
+        <circle cx="350" cy="214" r="34" stroke="#8A4553" stroke-opacity="0.35"/>
+        <circle cx="350" cy="214" r="9" fill="#8A4553"/>
+      </svg>
+    </div>
+  </section>
+</main>
+
+<footer class="contracapa">
+  <div class="cta-final">
+    <h2 class="cta-final__titulo">Seu horário está a uma conversa <span class="it">daqui.</span></h2>
+    <div class="cta-final__lado">
+      <p>Pergunte o preço, escolha a profissional e marque. A confirmação chega na hora.</p>
+      <a class="btn btn--papel" href="whatsapp/">
+        <svg width="20" height="20" viewBox="0 0 256 256" fill="none" aria-hidden="true"><path d="M45.4 177A96 96 0 1 1 79 210.6L45.8 220.1a8 8 0 0 1-9.9-9.9Z" stroke="currentColor" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Agendar pelo WhatsApp
+      </a>
+    </div>
+  </div>
+  <div class="rodape">
+    <span class="logo logo--claro"><span class="logo__palavra">entrelinha</span><span class="fio-duplo" aria-hidden="true"></span></span>
+    <p class="rodape__end">Rua das Camomilas, 186 · Alto da Glória<br>Curitiba/PR · +55 41 90000-0003</p>
+    <p class="rodape__aviso">Entrelinha é uma marca fictícia, criada pela WeBuild para demonstrar landing, totem, WhatsApp e automação. As imagens foram geradas por IA.</p>
+  </div>
+</footer>
+
+<script src="assets/demo-bar.js"></script>
+<script src="assets/landing.js"></script>
+</body>
+</html>
